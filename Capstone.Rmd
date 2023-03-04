@@ -1,0 +1,309 @@
+---
+title: "Capstone Project"
+author: "Erik Emilsson"
+date: "20 December 2022"
+output:
+  html_document: default
+  pdf_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+*This project is part of the Google Data Analytics Certificate on Coursera and *
+*the dataset and the fictional problem comes from Track 1 How does a bike-share*
+*navigate speedy business. I am using R in R-markdown for data import, cleaning*
+*and visualization as well as the final reporting. R-markdown can do all these *
+*steps and having everything in one place keeps track of the assumptions and *
+*steps of the analysis for transparency and reporoducibilty.*
+
+The project will be split up into three parts:
+
+1) Business Task Background
+2) Data Import, Exploration, and Cleaning
+3) Data Analysis
+   a) How are the different bike types used by members and non-members?
+   b) How is the trip time different for members and non-members?
+   c) How are the bikes used throughout the year?
+4) Evaluation and conclusions
+
+# 1.Business Task Background
+Cyclist is a bike/share program with over 5,800 bikes and 600 docking stations. 
+Currently there are two types of riders: 
+
+1) **casual riders** (those who buy single-ride or full-day passes), and 
+2) **annual members a.k.a. Cyclistic members**. 
+
+The goal is to *maximize the number of annual memberships for the company by* 
+*converting more casual riders to annual members*. Lily Moreno (director of 
+marketing) and the Cyclistic finance analysts have concluded that that annual 
+members are more profitable than casual riders. Before this, Cyclistic have 
+focused on building general awareness and appealing to broad consumer segments.
+
+Currently 8 percent of riders use assistive options (e.g. reclining bikes, hand 
+tricycles, and cargo bikes) while the rest use traditional bikes. Those who use 
+traditional bikes are more likely to be casual riders, but about 30 percent of 
+them use the service to commute to work each day.
+
+Of the the following three questions that will guide the larger scope of the 
+future marketing program, this report will only answer the first question:
+
+* <mark>**How do annual members and casual riders use Cyclistic bikes**</mark>
+  <mark>**differently?**</mark>
+* Why would casual riders buy Cyclistic annual memberships?
+* How can Cyclistic use digital media to influence casual riders to become 
+annual members?
+
+The stakeholders are:
+
+* Lily Moreno, director of marketing and my fictional manager,
+* The Cyclistic marketing analytics team (which I am part of), which supports 
+  the Cyclistic marketing strategy with data, and
+* The Cyclistic executive team that will decide if the recommended marketing 
+  program is approved or not.
+  
+# 2. Data Import, Exploration, and Cleaning
+
+The dataset that will be used to answer the business task is Cycilstic's 
+historical trip data for the previous 12 months. The dataset was downloaded 
+from the database in a zip file with a folder for each month , each containing 
+data in CSV-format. The data ranges from October 2021 to September 2022, using 
+ISO date notation (YYYYMMDD). All the datasheets were uploaded into BigQuery 
+from a Google Drive location, and were appended in a single table. The 4 
+geographical coordinates columns (longitudes and latitudes for start and end 
+stations) were removed as this analysis will not be using them. A CSV file of 
+the results was exported as a CSV file to Google Drive and subsequently 
+imported into R for further cleaning and analysis.
+```{r}
+library(tidyverse)
+library(skimr)
+library(janitor)
+library(lubridate)
+```
+
+```{r Data Import, echo=FALSE, message=FALSE}
+df <- read_csv("202110-202209_AppendedData.csv", show_col_types = FALSE)
+head(df)
+```
+
+The data from the CSV files has 9 columns from the start. At first glance the 
+headers need to be changed to be more descriptive and there are missing values 
+in the station names and IDs that need to be considered.
+
+```{r Rename headers}
+df_1 <- df %>% 
+  rename(Ride_ID = ride_id) %>%
+  rename(Bike_Type = rideable_type) %>%
+  rename(Rider_Type = member_casual) %>% 
+  rename(Start_Time = started_at) %>% 
+  rename(End_Time = ended_at)
+```
+
+There are also missing observations for some of the columns in the head. Using 
+a different function allows us to see more information about missing values and 
+also unique values for each column.
+
+```{r Information about missing and unique values}
+skim_without_charts(df_1)
+```
+From the output we see, for the unique observations:
+* There are 5,828,235 observations, all with unique Ride_IDs for each row.
+* There are 3 unique values for Bike_Type and 2 unique values for Rider_Type.
+* Start and end station names and IDs have about 1000-2000 unique values.
+* The unique values of all the locations are much greater than the "over 600 
+  docking station" that were stated in the case study description. Start/End 
+  station ID come closest (1302 and 1309 unique values). Street name
+
+We also see for the missing data:
+* Between 15-17% of the data is missing for the start and end station names and 
+  IDs and the missing data for both is identical. Thus, choosing to omit either 
+  columns for name or ID should not have any effect on the missing data. I will 
+  remove names since IDs have a figure closer to the 600 docks from the case 
+  study description.
+  
+```{r Replace NAs with Missing location IDs}
+df_2 <- df_1 %>%
+  replace_na(list(start_station_id = 'Missing location ID', end_station_id = 
+                    'Missing location ID')) %>%
+  replace_na(list(start_station_id = 'Missing location Name', end_station_id = 
+                    'Missing location Name'))
+```
+
+There may be many reasons for why there's missing data, and I will speculate a 
+bit here so I can explain my choice in cleaning. For instance, it could be that
+there the data wasn't transmitted properly due to bad connections. There might 
+also be missing data because the bike was parked/thrown somewhere "unofficial" 
+at the end of the ride. Whatever the case, the missing data will be of high 
+importance and thus shouldn't be removed to be transparent and to be clear 
+where more or better data collection is be needed for more granular insights 
+into locations.
+
+Finally to calculate the start date of the ride and the total travel time.
+
+```{r Add start date column}
+df_2 <- 
+  mutate(df_2, Trip_Day = as_date(Start_Time))
+```
+
+For the total travel time I'll add another column that shows the total time the riders used the bikes for in days, by taking the difference between 'started_at' and 'ended_at' and naming the new column header 'Trip_Time_Days'.
+
+```{r Add Trip time column}
+#as.duration((df_2$Trip_Time_Days),"minutes") <-
+  
+df_2 <- 
+  mutate(df_2, Trip_Time = seconds_to_period(as_datetime(df_2$End_Time)-
+           as_datetime(df_2$Start_Time))) %>% 
+  mutate(df_2, Trip_Time_seconds = as_datetime(df_2$End_Time)-
+           as_datetime(df_2$Start_Time)) %>% 
+  select(Ride_ID,Bike_Type,start_station_name,end_station_name,start_station_id,end_station_id,Rider_Type,Trip_Time, Trip_Time_seconds, Trip_Day)
+```
+
+There also appears to be some days are less than 0 for members using electric 
+bikes so these will be removed.
+
+```{r}
+paste(sum(df_2$Trip_Time < 0),"rows with trip times below 0 seconds have been removed.")
+
+df_clean <- df_2[df_2$Trip_Time >= 0, ] #removes rows below 0 seconds
+rm(df,df_1,df_2) #removes other dataframes to save memory
+
+```
+```{r}
+head(df_clean)
+```
+
+# 3. Analyzing the Questions
+
+## 3a. How are the different bike types used by members and non-members?
+
+Visualize the counts of rides by bike type and member/casual(non-member):
+```{r Rider type vs Bike type}
+ggplot() +
+  geom_bar(df_clean, mapping = aes(Rider_Type)) +
+  facet_wrap(~Bike_Type) +
+  labs(title="Annual number of rides", x = "", y = "Rides")
+```
+Some observations of the graph:
+* There are more rides from members than rides by casual riders in total.
+* Casual riders seem to prefer electric bikes over classic bikes while it is the
+  opposite for members. However, the difference is not substantial.
+* Classic bikes are used much more by members than by casual riders. Electric
+  bikes are used about the same amount by members and casual riders.
+* Docked bikes were not used at all by members.
+* Docked bikes are used much less than any other type of bike.
+
+Some questions that pop up from this first graph are:
+* Why don't any annual members use docked bikes at all? Are docked bikes 
+  available in the areas where they would be used? What percentage of rides are 
+  using docked bikes?
+* Why do casual riders prefer electric bikes and members prefer classic bikes?
+
+## 3b. How is the trip time different for members and non-members?
+
+To get some stats on the trip time I'll do some 
+* Average travel time for each bike type and membership type
+* Min max och each travel time for each bike type and membership type
+
+```{r message=FALSE}
+#percentage of riders using docked bikes
+df_clean %>%
+  group_by(Rider_Type, Bike_Type) %>%
+  summarise(mean = mean(Trip_Time_seconds), n= n()) %>%
+  ggplot(mapping = aes(x = Rider_Type, y = mean)) +
+  geom_bar(stat= "identity") +
+  facet_wrap(~Bike_Type) +
+  labs(title="Mean ride times", x = "", y = "seconds")
+```
+This shows that although there aren't as many docked bikes as other types of 
+bikes, the total annual ride time is in the same ballpark.
+
+Docked bikes seem to include times that are much greater than electric and 
+classic bikes in travel time, so this will be investigated further in a 
+distribution.
+
+```{r}
+df_clean %>%
+  filter(Bike_Type %in% c('classic_bike','docked_bike','electric_bike')) %>% 
+  ggplot(aes(x=Trip_Time_seconds, color = Bike_Type)) + 
+  geom_density() +
+  scale_x_continuous(limits=c(0, 10000)) +
+  labs(title = "Distribution of trip times", 
+       x = "Trip times in seconds", y = "Number of rides") +
+  theme(axis.text.y =element_blank(), axis.ticks.y=element_blank())
+```
+
+The comparison between the trip times for the different bikes shows that the 
+electric and classic bikes are quite similar in trip time distribution while 
+the docked bikes are on average used for longer. In fact, almost no classic 
+and electric bikes are used for longer than 3000 seconds (about 1 hour) while 
+some bike users take trips at up to about 1000 seconds (about 3 hours) or 
+longer. Since all docked bike users are non-members, this is difference in 
+user behavior should be looked at closer.
+
+## 3c. How are the bikes used throughout the year?
+
+The following graphs will plot the distribution of rides throughout the year, 
+divided into bike types in the first graph and non-member/member in the second 
+graph. Note that the dips in the month of October is due to the cut-off in the 
+data being in that month, hence the October 2021 and October 2022 data should
+be aggregated to get the "real" value for that month.
+```{r}
+df_clean %>%
+  filter(Bike_Type %in% c('classic_bike','docked_bike','electric_bike')) %>% 
+  ggplot(aes(x=Trip_Day,color = Bike_Type)) + 
+  geom_density() +
+  labs(title = "Trips distribution per time of year", 
+       x = "", y = "") +
+  theme(axis.text.y =element_blank(), axis.ticks.y=element_blank())
+```
+Bike usage is higher between May-October and lower between September-April.
+
+There is not much difference between what time of year users of different bike 
+types ride bikes except for a dip of relative electric bike usage in June.
+
+```{r}
+df_clean %>%
+  filter(Rider_Type %in% c('casual','member')) %>% 
+  ggplot(aes(x=Trip_Day, color = Rider_Type)) + 
+  geom_density() +
+  labs(title = "Trips distribution per time of year", 
+       x = "", y = "") +
+  theme(axis.text.y =element_blank(), axis.ticks.y=element_blank())
+```
+
+Members have a more even distribution of usage for throughout the year compared 
+to casual riders. Essentially, the cooler months of September-May casual riders 
+use the service less relative to members while in the warmer months June-October 
+they use the bikes more relative to members. The difference is most extreme in
+June-August.
+
+As the summer months are where most casual riders are using the bikes, there 
+could be an opportunity to run campaigns during these months.
+
+## 4. Evaluation and conclusions
+
+The lack of data on station names (of about 15%) and geographical coordinates 
+(less than 1%) can mean that the results are skewed, especially if the lack of 
+data for these observations are not spread evenly. For example, if there are 
+specific stations that don't show the data, then there could be a significant 
+difference from the reported and actual number of rides in that area.
+
+Recommendations for further analysis:
+* Look into why docked bike users aren't members. Like: why don't any annual 
+  members use docked bikes? Are memberships available for riders of docked bikes 
+  and/or are the riders aware of the memberships?
+* See why some docked bike rides are up to 40,000minutes long (almost 10 days). 
+  These riders are likely more intersted in a membership because they're paying 
+  a lot for the rentals by only being casual riders.
+* Collect data on the behavior of specific users as well, not only per ride. 
+  Tracking individuals can give more insight into how the users use the bikes.
+* Look into why there is missing data and if there is more than one reason for 
+  the 15% that don't show up in station names & IDs.
+* Why do casual riders prefer electric bikes and members prefer classic bikes? 
+  Perform a questionaire to capture what casual members are drawn to regarding 
+  electric bikes and if there is anything Cyclistic can do to make a membership 
+  more palatable from their answers.
+* Run campaigns during the months of heavy casual rider bike use, during 
+  the months of June-August.
