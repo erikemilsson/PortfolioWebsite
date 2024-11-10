@@ -1,34 +1,65 @@
 ---
-title: "Lumo: a clean Quarto template for stunning data reports"
-subtitle: "This document showcases how a Quarto report made using the <code>Lumo</code> format looks like. It also demoes a few tips and tricks I 💜"
+title: "Erik Emilsson's Portfolio Page"
+subtitle: "Professional and personal projects."
 format:
   lumo-html: 
-    logo: "logo.png"                                     # Optional. Path to a logo displayed above the title
-    github-repo: "https://github.com/holtzy/lumo"        # Optional. Adds a github corner at the top right
-    primary-color: "#69b3a2"
+    logo:  # optional image file above the title, square
+    github-repo: "https://github.com/erikemilsson"
+    primary-color: "#57473A"
     self-contained: true
-    is-particlejs-enabled: true                          # Optional: display interactive particles in the document header
-    bg-image: ""                                         # Optional: link to an image for the header background
-author: Holtz Yan
+    is-particlejs-enabled: false
+    bg-image: "" # Optional image file for the header background
+author: Erik Emilsson
 date: last-modified
 ---
 
 ## Introduction
 
-Quarto is probably my favorite tool in the R/Python universe. Transforming your code and thoughts into a stunning report in one click always blows my mind.
+Thank you for visiting my website. 
 
-While the default Quarto appearance **looks great**, there are [a few tweaks](https://www.productive-r-workflow.com/quarto-tricks) I always apply to elevate the report even further. Rather than manually adding them each time, I bundled everything into a custom format called `lumo`.
+I created it to share with you the results from some of my projects that I've had the fortune to be a part of. I hope you find them interesting and that they can be a source of inspiration for you.
+
+::: {.column-margin}
+Please feel free to contact me on [LinkedIn](www.linkedin.com/in/erikemilsson)
+
+- I speak English
+- Jag pratar svenska
+- Yo hablo español
+:::
+
+From my experience I am convinced that understanding and mastering **data tools** and **cloud services** is the way forward for effective engineering and making accessible technologies for businesses and individuals that can improve *efficiency*, *safety*, and *quality of life*.
+
+## Experience Overview and CV-Link
+
+I have worked for over half a decade with **sustainability management and consulting**. In my formal education I have a B.Sc **chemical engineering** (with engineering physics) and a M.Sc. **applied physics**.
+
+I'm a certified **Power BI data analyst** associate and I'm also certified in **Azure cloud** and **Azure AI** fundamentals. I'm also well underway to become certified in end-to-end enterprise analytics as a **Fabric Analytics Engineer** associate. 
 
 ::: {.column-margin}
 
-Btw, you can learn how to master Quarto thanks to my online course: [Productive R Workflow](https://www.productive-r-workflow.com)
+*A problem well-stated is a problem half-solved.* - Charles F. Kettering
 
 :::
 
+Some of my favourite technologies and programming languages from my projects are:
 
-This document aims at showcasing how a quarto document made with the `lumo` format looks like.
+- Python
+- Power BI & DAX
+- PostgreSQL
 
 
-## Documentation
+I also have experience with the following from courses and projects:
+
+- Excel & Power Query
+- Microsoft SQL Server
+- Google BigQuery ()
+- R language (Google Data Analysis Certificate)
+- DAX
+
+See my entire work history on my [LinkedIn](www.linkedin.com/in/erikemilsson).
+
+## Professional Projects
 
 The documentation for this quarto custom format is available [here](https://www.productive-r-workflow.com/r/bonus/lumo-quarto-template)
+
+## Personal Projects
