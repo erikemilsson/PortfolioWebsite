@@ -5,7 +5,7 @@ format:
   lumo-html: 
     logo:  # optional image file above the title, square
     github-repo: "https://github.com/erikemilsson"
-    primary-color: "#57473A"
+    primary-color: "#2b3137" # github's secondary color from their color palette
     self-contained: true
     is-particlejs-enabled: false
     bg-image: "" # Optional image file for the header background
@@ -17,49 +17,61 @@ date: last-modified
 
 Thank you for visiting my website. 
 
-I created it to share with you the results from some of my projects that I've had the fortune to be a part of. I hope you find them interesting and that they can be a source of inspiration for you.
+I created it to share with you the results from some of my projects that I've had the fortune to be a part of. I hope you find them interesting and that they can be a source of inspiration.
 
 ::: {.column-margin}
-Please feel free to contact me on [LinkedIn](www.linkedin.com/in/erikemilsson)
+Contact me on [LinkedIn](www.linkedin.com/in/erikemilsson)
 
-- I speak English
-- Jag pratar svenska
-- Yo hablo español
+I speak English
+
+Jag pratar svenska
+
+Yo hablo español
 :::
 
 From my experience I am convinced that understanding and mastering **data tools** and **cloud services** is the way forward for effective engineering and making accessible technologies for businesses and individuals that can improve *efficiency*, *safety*, and *quality of life*.
 
-## Experience Overview and CV-Link
+## Competency Overview
 
-I have worked for over half a decade with **sustainability management and consulting**. In my formal education I have a B.Sc **chemical engineering** (with engineering physics) and a M.Sc. **applied physics**.
+I have over six year's experience in **sustainability management consulting** in the product development & purchasing departments of a multi-national manufacturing conglomerate. In parallel, I have **data analytics/science** experience from several EU-funded research projects within electrification and circular economy. From my formal education in B.Sc **chemical engineering** (with engineering physics), and a M.Sc. **applied physics** I have a solid understanding of **applied mathematical modelling** and **statistics**.
 
-I'm a certified **Power BI data analyst** associate and I'm also certified in **Azure cloud** and **Azure AI** fundamentals. I'm also well underway to become certified in end-to-end enterprise analytics as a **Fabric Analytics Engineer** associate. 
+I'm a certified [**Power BI data analyst**](https://learn.microsoft.com/api/credentials/share/en-us/ErikEmilsson-8069/5E435A2FA1F8B691?sharingId=BB4E4B973D67B45F) associate and I'm also certified in [**Azure cloud**](https://learn.microsoft.com/api/credentials/share/en-us/ErikEmilsson-8069/B0D068A103061930?sharingId=BB4E4B973D67B45F) and [**Azure AI**](https://learn.microsoft.com/api/credentials/share/en-us/ErikEmilsson-8069/6F71EC0D6B0C4683?sharingId=BB4E4B973D67B45F) fundamentals. I'm also well underway to become certified in end-to-end enterprise analytics as a **Fabric Analytics Engineer** associate. 
 
 ::: {.column-margin}
-
-*A problem well-stated is a problem half-solved.* - Charles F. Kettering
-
+*"Innovation distinguishes between a leader and a follower."* - Steve Jobs
 :::
 
-Some of my favourite technologies and programming languages from my projects are:
+Some of my favourite technologies and programming languages that I have used in my professional projects are:
 
-- Python
-- Power BI & DAX
-- PostgreSQL
+- Microsoft **Power BI** with **DAX** for enterprise dashboards.
+- Microsoft **Excel** with **Power Query** for calculations and ETL.
+- **Python** for solving discrete optimization problems, ETL, and dynamic visuals.
+- **VS Code** as my main code editor.
+- Microsoft **Sharepoint** and **Teams** for collaboration.
+- **draw.io** for data- and entity-modelling.
 
+I also have experience with the following from courses and personal projects:
 
-I also have experience with the following from courses and projects:
-
-- Excel & Power Query
-- Microsoft SQL Server
-- Google BigQuery ()
-- R language (Google Data Analysis Certificate)
-- DAX
-
-See my entire work history on my [LinkedIn](www.linkedin.com/in/erikemilsson).
+- **T-SQL** in Microsoft **SQL Server** and **Azure SQL Services** for learning about data warehouseing and enterprise analytics.
+- **PostgreSQL** for learning SQL for local data warehousing.
+- Data Warehousing with **Standard SQL** in **GCP's BiqQuery** 
+- **Sqlite** for learning SQL for Data Science
+- **R**-language data cleaning, transformations, and visualizations.
+- **Tableau** for creating visuals in dashboards.
+- **PySpark** for learning real-time enterprise analytics.
 
 ## Professional Projects
 
-The documentation for this quarto custom format is available [here](https://www.productive-r-workflow.com/r/bonus/lumo-quarto-template)
+*Under construction.*
+
+#### ELiMINATE
+
+![Results from linear programming.](projects//Eliminate/Eliminate.PNG)
 
 ## Personal Projects
+
+*Under construction.*
+
+::: {.column-margin}
+*A problem well-stated is a problem half-solved.* - Charles F. Kettering
+:::
