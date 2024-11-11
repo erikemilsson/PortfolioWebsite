@@ -1,10 +1,9 @@
 [build]
-command = "quarto publish"
 publish = "_site"
-
-[context.production.environment]
-QUARTO_VERSION = latest
 
 [dev]
 command = "quarto preview"
 port = 8080
+
+[[plugins]]
+package = "@quarto/netlify-plugin-quarto"

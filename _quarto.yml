@@ -22,4 +22,4 @@ publish:
     netlify:
       - id: 8c016a7b-14ea-4784-89bf-d6bc7c062bef
         url: erikemilsson.com
-        format: themes/lumo/lumo-html 
+        format: themes/lumo/lumo-html
