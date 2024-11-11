@@ -1,5 +1,8 @@
 project:
   type: website
+  resources: 
+    - projects/Eliminate/Copy of Sankey_B_2030.html
+    - projects/Eliminate/Supply_and_Demand_Year_2030.html 
 
 website:
   title: "My Portfolio"
@@ -7,19 +10,19 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: projects/
+      - href: projects/projects.qmd
         text: Projects
       - href: about.qmd
         text: About
 
-format:
-  lumo-html: 
-    logo:  # optional image file above the title, square
-    github-repo: "https://github.com/erikemilsson"
-    primary-color: "#2b3137" # github's secondary color from their color palette
-    self-contained: true
-    is-particlejs-enabled: false
-    bg-image: "" # Optional image file for the header background
+#format:
+#  lumo-html: 
+#    logo:  # optional image file above the title, square
+#    github-repo: "https://github.com/erikemilsson"
+#    primary-color: "#2b3137" # github's secondary color from their color palette
+#    self-contained: true
+#    is-particlejs-enabled: false
+#    bg-image: "" # Optional image file for the header background
 
 execute: 
   freeze: auto  

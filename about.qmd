@@ -1,0 +1,28 @@
+---
+title: "About"
+subtitle: Some personal stuff
+---
+
+*This page is still under construction.*
+
+# About me
+
+Living in Gothenburg Sweden. I've previously lived in 
+
+- Malaga, Spain
+- Kalmar, Sweden
+- Tokyo, Japan
+- London, England
+- Houston, USA
+
+# Pictures
+
+![Tjörn, Sweden](./images/Erik_1_Tjörn.jpeg)
+
+![Eating churros and hot chocolate in Barcelona, Spain](./images/Erik_5_Barcelona.jpeg)
+
+![Visiting Kuusakoski dismantling facilities in Skellefteå, Sweden](./images/Erik_7_Kuusakoski.jpg)
+
+![Visiting Northvolt on a rainy day in Skellefteå, Sweden](./images/Erik_8_Northvolt.jpg)
+
+![Visiting Tabletop Mountain in Cape Town, South Africa](./images/Erik_11_CapeTown.jpg)

@@ -1,6 +1,6 @@
 ---
 title: "Erik Emilsson's Portfolio Page"
-subtitle: "Professional and personal projects."
+# subtitle: 
 ---
 
 ## Introduction
@@ -12,11 +12,9 @@ I created it to share with you the results from some of my projects that I've ha
 ::: {.column-margin}
 Contact me on [LinkedIn](www.linkedin.com/in/erikemilsson)
 
-I speak English
-
-Jag pratar svenska
-
-Yo hablo español
+- I speak English
+- Jag pratar svenska
+- Yo hablo español
 :::
 
 From my experience I am convinced that understanding and mastering **data tools** and **cloud services** is the way forward for effective engineering and making accessible technologies for businesses and individuals that can improve *efficiency*, *safety*, and *quality of life*.
@@ -49,19 +47,3 @@ I also have experience with the following from courses and personal projects:
 - **R**-language data cleaning, transformations, and visualizations.
 - **Tableau** for creating visuals in dashboards.
 - **PySpark** for learning real-time enterprise analytics.
-
-## Professional Projects
-
-*Under construction.*
-
-#### ELiMINATE
-
-![Results from linear programming.](projects//Eliminate/Eliminate.PNG)
-
-## Personal Projects
-
-*Under construction.*
-
-::: {.column-margin}
-*A problem well-stated is a problem half-solved.* - Charles F. Kettering
-:::
