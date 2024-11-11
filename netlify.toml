@@ -1,0 +1,10 @@
+[build]
+command = "quarto publish"
+publish = "_site"
+
+[context.production.environment]
+QUARTO_VERSION = "1.5.57"
+
+[dev]
+command = "quarto preview"
+port = 8080

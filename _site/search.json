@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "projects/project-1/project-1.html",
+    "href": "projects/project-1/project-1.html",
+    "title": "Project 1",
+    "section": "",
+    "text": "This project explores the relationship between sepal length and petal length in iris flowers.\nLink to Project Repository [invalid URL removed]"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Erik Emilsson’s Portfolio Page",
+    "section": "",
+    "text": "Thank you for visiting my website.\nI created it to share with you the results from some of my projects that I’ve had the fortune to be a part of. I hope you find them interesting and that they can be a source of inspiration.\n\n\nContact me on LinkedIn\nI speak English\nJag pratar svenska\nYo hablo español\nFrom my experience I am convinced that understanding and mastering data tools and cloud services is the way forward for effective engineering and making accessible technologies for businesses and individuals that can improve efficiency, safety, and quality of life."
+  },
+  {
+    "objectID": "index.html#introduction",
+    "href": "index.html#introduction",
+    "title": "Erik Emilsson’s Portfolio Page",
+    "section": "",
+    "text": "Thank you for visiting my website.\nI created it to share with you the results from some of my projects that I’ve had the fortune to be a part of. I hope you find them interesting and that they can be a source of inspiration.\n\n\nContact me on LinkedIn\nI speak English\nJag pratar svenska\nYo hablo español\nFrom my experience I am convinced that understanding and mastering data tools and cloud services is the way forward for effective engineering and making accessible technologies for businesses and individuals that can improve efficiency, safety, and quality of life."
+  },
+  {
+    "objectID": "index.html#competency-overview",
+    "href": "index.html#competency-overview",
+    "title": "Erik Emilsson’s Portfolio Page",
+    "section": "Competency Overview",
+    "text": "Competency Overview\nI have over six year’s experience in sustainability management consulting in the product development & purchasing departments of a multi-national manufacturing conglomerate. In parallel, I have data analytics/science experience from several EU-funded research projects within electrification and circular economy. From my formal education in B.Sc chemical engineering (with engineering physics), and a M.Sc. applied physics I have a solid understanding of applied mathematical modelling and statistics.\nI’m a certified Power BI data analyst associate and I’m also certified in Azure cloud and Azure AI fundamentals. I’m also well underway to become certified in end-to-end enterprise analytics as a Fabric Analytics Engineer associate.\n\n\n“Innovation distinguishes between a leader and a follower.” - Steve Jobs\nSome of my favourite technologies and programming languages that I have used in my professional projects are:\n\nMicrosoft Power BI with DAX for enterprise dashboards.\nMicrosoft Excel with Power Query for calculations and ETL.\nPython for solving discrete optimization problems, ETL, and dynamic visuals.\nVS Code as my main code editor.\nMicrosoft Sharepoint and Teams for collaboration.\ndraw.io for data- and entity-modelling.\n\nI also have experience with the following from courses and personal projects:\n\nT-SQL in Microsoft SQL Server and Azure SQL Services for learning about data warehouseing and enterprise analytics.\nPostgreSQL for learning SQL for local data warehousing.\nData Warehousing with Standard SQL in GCP’s BiqQuery\nSqlite for learning SQL for Data Science\nR-language data cleaning, transformations, and visualizations.\nTableau for creating visuals in dashboards.\nPySpark for learning real-time enterprise analytics."
+  },
+  {
+    "objectID": "index.html#professional-projects",
+    "href": "index.html#professional-projects",
+    "title": "Erik Emilsson’s Portfolio Page",
+    "section": "Professional Projects",
+    "text": "Professional Projects\nUnder construction.\n\nELiMINATE\n\n\n\nResults from linear programming."
+  },
+  {
+    "objectID": "index.html#personal-projects",
+    "href": "index.html#personal-projects",
+    "title": "Erik Emilsson’s Portfolio Page",
+    "section": "Personal Projects",
+    "text": "Personal Projects\nUnder construction.\n\n\n\n\nA problem well-stated is a problem half-solved. - Charles F. Kettering"
+  }
+]

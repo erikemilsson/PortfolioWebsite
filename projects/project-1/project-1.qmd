@@ -5,5 +5,3 @@ This project explores the relationship between sepal length and petal length in 
 **Link to Project Repository [invalid URL removed]**
 
 ## Visualizations
-
-{{< include "[invalid URL removed]" >}}
