@@ -7,10 +7,19 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: about.qmd
-        text: About
       - href: projects/
         text: Projects
+      - href: about.qmd
+        text: About
+
+format:
+  lumo-html: 
+    logo:  # optional image file above the title, square
+    github-repo: "https://github.com/erikemilsson"
+    primary-color: "#2b3137" # github's secondary color from their color palette
+    self-contained: true
+    is-particlejs-enabled: false
+    bg-image: "" # Optional image file for the header background
 
 execute: 
   freeze: auto  
@@ -22,4 +31,4 @@ publish:
     netlify:
       - id: 8c016a7b-14ea-4784-89bf-d6bc7c062bef
         url: erikemilsson.com
-        format: themes/lumo/lumo-html
+        format: _extensions/lumo
