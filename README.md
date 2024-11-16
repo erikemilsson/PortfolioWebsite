@@ -1,5 +1,5 @@
 # Portfolio Website
 
-Repository for my website showcasing my professional and personal projects.
+Repository for my website showcasing my professional and personal projects. 
 
-[Website Link](erikemilsson.com)
+www.erikemilsson.com
