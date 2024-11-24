@@ -1,13 +1,35 @@
 ---
-title: "About"
-subtitle: Some personal stuff
+title: "More About Me"
 ---
 
-*This page is still under construction.*
+I have over six year's experience in **sustainability management consulting** in the product development & purchasing departments of a multi-national manufacturing conglomerate. In parallel, I have **data analytics/science** experience from several EU-funded research projects within electrification and circular economy. From my formal education in B.Sc **chemical engineering** (with engineering physics), and a M.Sc. **applied physics** I have a solid understanding of **applied mathematical modelling** and **statistics**.
 
-# About me
+I'm a certified [**Power BI Data Analyst**](https://learn.microsoft.com/api/credentials/share/en-us/ErikEmilsson-8069/5E435A2FA1F8B691?sharingId=BB4E4B973D67B45F) associate and I'm also certified in [**Azure cloud**](https://learn.microsoft.com/api/credentials/share/en-us/ErikEmilsson-8069/B0D068A103061930?sharingId=BB4E4B973D67B45F) and [**Azure AI**](https://learn.microsoft.com/api/credentials/share/en-us/ErikEmilsson-8069/6F71EC0D6B0C4683?sharingId=BB4E4B973D67B45F) fundamentals. I'm also well underway to become certified in end-to-end enterprise analytics as a **Fabric Analytics Engineer** associate. 
 
-Living in Gothenburg Sweden. I've previously lived in 
+::: {.column-margin}
+*"Innovation distinguishes between a leader and a follower."* - Steve Jobs
+:::
+
+Some of my favourite technologies and programming languages that I have used in my professional projects are:
+
+- Microsoft **Power BI** with **DAX** for enterprise dashboards.
+- Microsoft **Excel** with **Power Query** for calculations and ETL.
+- **Python** for solving discrete optimization problems, ETL, and dynamic visuals.
+- **VS Code** as my main code editor.
+- Microsoft **Sharepoint** and **Teams** for collaboration.
+- **draw.io** for data- and entity-modelling.
+
+I also have experience with the following from courses and personal projects:
+
+- **T-SQL** in Microsoft **SQL Server** and **Azure SQL Services** for learning about data warehouseing and enterprise analytics.
+- **PostgreSQL** for learning SQL for local data warehousing.
+- Data Warehousing with **Standard SQL** in **GCP's BiqQuery** 
+- **Sqlite** for learning SQL for Data Science
+- **R**-language data cleaning, transformations, and visualizations.
+- **Tableau** for creating visuals in dashboards.
+- **PySpark** for learning real-time enterprise analytics.
+
+I'm currently living in Gothenburg Sweden and I've previously lived in 
 
 - Malaga, Spain
 - Kalmar, Sweden

@@ -9,16 +9,16 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Erik Emilsson’s Portfolio Page",
+    "title": "Erik Emilsson’s Portfolio",
     "section": "",
-    "text": "Thank you for visiting my website.\nI created it to share with you the results from some of my projects that I’ve had the fortune to be a part of. I hope you find them interesting and that they can be a source of inspiration.\n\n\nContact me on LinkedIn\n\nI speak English\nJag pratar svenska\nYo hablo español\n\nFrom my experience I am convinced that understanding and mastering data tools and cloud services is the way forward for effective engineering and making accessible technologies for businesses and individuals that can improve efficiency, safety, and quality of life."
+    "text": "I help businesses optimize their strategies with cloud and data solutions. My expertise lies in logistics and supply chains, sustainability reporting, and materials engineering. Explore my portfolio to see how I can help your business thrive."
   },
   {
     "objectID": "index.html#introduction",
     "href": "index.html#introduction",
-    "title": "Erik Emilsson’s Portfolio Page",
+    "title": "Erik Emilsson’s Portfolio",
     "section": "",
-    "text": "Thank you for visiting my website.\nI created it to share with you the results from some of my projects that I’ve had the fortune to be a part of. I hope you find them interesting and that they can be a source of inspiration.\n\n\nContact me on LinkedIn\n\nI speak English\nJag pratar svenska\nYo hablo español\n\nFrom my experience I am convinced that understanding and mastering data tools and cloud services is the way forward for effective engineering and making accessible technologies for businesses and individuals that can improve efficiency, safety, and quality of life."
+    "text": "I help businesses optimize their strategies with cloud and data solutions. My expertise lies in logistics and supply chains, sustainability reporting, and materials engineering. Explore my portfolio to see how I can help your business thrive."
   },
   {
     "objectID": "index.html#competency-overview",
@@ -72,8 +72,92 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "More About Me",
     "section": "",
-    "text": "This page is still under construction.\n\nAbout me\nLiving in Gothenburg Sweden. I’ve previously lived in\n\nMalaga, Spain\nKalmar, Sweden\nTokyo, Japan\nLondon, England\nHouston, USA\n\n\n\nPictures\n\n\n\nTjörn, Sweden\n\n\n\n\n\nEating churros and hot chocolate in Barcelona, Spain\n\n\n\n\n\nVisiting Kuusakoski dismantling facilities in Skellefteå, Sweden\n\n\n\n\n\nVisiting Northvolt on a rainy day in Skellefteå, Sweden\n\n\n\n\n\nVisiting Tabletop Mountain in Cape Town, South Africa"
+    "text": "I have over six year’s experience in sustainability management consulting in the product development & purchasing departments of a multi-national manufacturing conglomerate. In parallel, I have data analytics/science experience from several EU-funded research projects within electrification and circular economy. From my formal education in B.Sc chemical engineering (with engineering physics), and a M.Sc. applied physics I have a solid understanding of applied mathematical modelling and statistics.\nI’m a certified Power BI Data Analyst associate and I’m also certified in Azure cloud and Azure AI fundamentals. I’m also well underway to become certified in end-to-end enterprise analytics as a Fabric Analytics Engineer associate.\n\n\n“Innovation distinguishes between a leader and a follower.” - Steve Jobs\nSome of my favourite technologies and programming languages that I have used in my professional projects are:\n\nMicrosoft Power BI with DAX for enterprise dashboards.\nMicrosoft Excel with Power Query for calculations and ETL.\nPython for solving discrete optimization problems, ETL, and dynamic visuals.\nVS Code as my main code editor.\nMicrosoft Sharepoint and Teams for collaboration.\ndraw.io for data- and entity-modelling.\n\nI also have experience with the following from courses and personal projects:\n\nT-SQL in Microsoft SQL Server and Azure SQL Services for learning about data warehouseing and enterprise analytics.\nPostgreSQL for learning SQL for local data warehousing.\nData Warehousing with Standard SQL in GCP’s BiqQuery\nSqlite for learning SQL for Data Science\nR-language data cleaning, transformations, and visualizations.\nTableau for creating visuals in dashboards.\nPySpark for learning real-time enterprise analytics.\n\nI’m currently living in Gothenburg Sweden and I’ve previously lived in\n\nMalaga, Spain\nKalmar, Sweden\nTokyo, Japan\nLondon, England\nHouston, USA\n\n\nPictures\n\n\n\nTjörn, Sweden\n\n\n\n\n\nEating churros and hot chocolate in Barcelona, Spain\n\n\n\n\n\nVisiting Kuusakoski dismantling facilities in Skellefteå, Sweden\n\n\n\n\n\nVisiting Northvolt on a rainy day in Skellefteå, Sweden\n\n\n\n\n\nVisiting Tabletop Mountain in Cape Town, South Africa"
+  },
+  {
+    "objectID": "projects/professional_projects.html",
+    "href": "projects/professional_projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "This page is still under construction.\n\nELiMINATE\nProjected resource flows for battery recycling in Europe in 2030.\n\n\nProjected market for supply- and demand-nodes for lithium-ion battery recyclers in Europe\n\n\nA Power BI dashboard of lithium-ion batteries in Europe created in Power BI.\n\nThe optimal network for lithium-ion battery recycling in Europe for different recycling technologies using linear programming in Python."
+  },
+  {
+    "objectID": "projects/learning_projects.html",
+    "href": "projects/learning_projects.html",
+    "title": "Learning Projects",
+    "section": "",
+    "text": "Here I share some of my learning projects that I’ve done to gain experience in cloud and data services."
+  },
+  {
+    "objectID": "about.html#competency-overview",
+    "href": "about.html#competency-overview",
+    "title": "More About Me",
+    "section": "",
+    "text": "I have over six year’s experience in sustainability management consulting in the product development & purchasing departments of a multi-national manufacturing conglomerate. In parallel, I have data analytics/science experience from several EU-funded research projects within electrification and circular economy. From my formal education in B.Sc chemical engineering (with engineering physics), and a M.Sc. applied physics I have a solid understanding of applied mathematical modelling and statistics.\nI’m a certified Power BI Data Analyst associate and I’m also certified in Azure cloud and Azure AI fundamentals. I’m also well underway to become certified in end-to-end enterprise analytics as a Fabric Analytics Engineer associate.\n\n\n“Innovation distinguishes between a leader and a follower.” - Steve Jobs\nSome of my favourite technologies and programming languages that I have used in my professional projects are:\n\nMicrosoft Power BI with DAX for enterprise dashboards.\nMicrosoft Excel with Power Query for calculations and ETL.\nPython for solving discrete optimization problems, ETL, and dynamic visuals.\nVS Code as my main code editor.\nMicrosoft Sharepoint and Teams for collaboration.\ndraw.io for data- and entity-modelling.\n\nI also have experience with the following from courses and personal projects:\n\nT-SQL in Microsoft SQL Server and Azure SQL Services for learning about data warehouseing and enterprise analytics.\nPostgreSQL for learning SQL for local data warehousing.\nData Warehousing with Standard SQL in GCP’s BiqQuery\nSqlite for learning SQL for Data Science\nR-language data cleaning, transformations, and visualizations.\nTableau for creating visuals in dashboards.\nPySpark for learning real-time enterprise analytics."
+  },
+  {
+    "objectID": "about.html#more-about-me",
+    "href": "about.html#more-about-me",
+    "title": "More About Me",
+    "section": "More about me",
+    "text": "More about me\nLiving in Gothenburg Sweden. I’ve previously lived in\n\nMalaga, Spain\nKalmar, Sweden\nTokyo, Japan\nLondon, England\nHouston, USA"
+  },
+  {
+    "objectID": "index.html#eliminate",
+    "href": "index.html#eliminate",
+    "title": "Erik Emilsson’s Portfolio",
+    "section": "ELiMINATE",
+    "text": "ELiMINATE\nProjected resource flows for battery recycling in Europe in 2030.\n\n\nProjected market for supply- and demand-nodes for lithium-ion battery recyclers in Europe\n\n\nA Power BI dashboard of lithium-ion batteries in Europe created in Power BI.\n\nThe optimal network for lithium-ion battery recycling in Europe for different recycling technologies using linear programming in Python."
+  },
+  {
+    "objectID": "index.html#mapping-of-a-european-battery-supply-chain",
+    "href": "index.html#mapping-of-a-european-battery-supply-chain",
+    "title": "Erik Emilsson’s Portfolio",
+    "section": "Mapping of a European battery supply chain",
+    "text": "Mapping of a European battery supply chain\n\nBusiness Problem\nSeveral technologies for recycling batteries are considered within the scope of the European market. The market is dynamic, with a burgeoning number of actors opening up or increasing their production capacity in the coming years.\n\nMap the battery producers and the potential recycled battery material buyers in Europe to understand the dynamics from 2022 to 2030.\nOptimize the geographical placement(s) and the technology selection based on facility costs and CO2-emissions.\n\nProjected resource flows for battery recycling in Europe in 2030.\n\n\nProjected market for supply- and demand-nodes for lithium-ion battery recyclers in Europe\n\n\nA Power BI dashboard of lithium-ion batteries in Europe created in Power BI.\n\nThe optimal network for lithium-ion battery recycling in Europe for different recycling technologies using linear programming in Python."
+  },
+  {
+    "objectID": "index.html#reverse-logistics-optimization-of-a-european-battery-supply-chain",
+    "href": "index.html#reverse-logistics-optimization-of-a-european-battery-supply-chain",
+    "title": "Erik Emilsson’s Portfolio",
+    "section": "Reverse Logistics Optimization of a European battery supply chain",
+    "text": "Reverse Logistics Optimization of a European battery supply chain\nProjected resource flows for battery recycling in Europe in 2030.\n\n\nProjected market for supply- and demand-nodes for lithium-ion battery recyclers in Europe\n\n\nA Power BI dashboard of lithium-ion batteries in Europe created in Power BI.\n\nThe optimal network for lithium-ion battery recycling in Europe for different recycling technologies using linear programming in Python."
+  },
+  {
+    "objectID": "index.html#mapping-and-reverse-logistics-optimization-of-a-battery-recycler-facility-in-the-european-battery-supply-chain",
+    "href": "index.html#mapping-and-reverse-logistics-optimization-of-a-battery-recycler-facility-in-the-european-battery-supply-chain",
+    "title": "Erik Emilsson’s Portfolio",
+    "section": "Mapping and Reverse Logistics Optimization of a Battery Recycler Facility in the European Battery Supply Chain",
+    "text": "Mapping and Reverse Logistics Optimization of a Battery Recycler Facility in the European Battery Supply Chain\n\nBusiness Problem\nThe European Union is looking to scale up its battery recycling capacity to hit circular economy and carbon emission targets. Several technologies for recycling batteries are considered within the scope of the European market. The market is dynamic, with a burgeoning number of actors opening up or increasing their production capacity in the coming years.\n\nMap the battery producers and the potential recycled battery material buyers in Europe to understand the dynamics from 2022 to 2030.\nOptimize the geographical placement(s) and the technology selection based on facility costs and CO2-emissions.\n\n\n\nEuropean Battery Market Mapping\nProjected resource flows for battery recycling in Europe in 2030.\n\n\nProjected market for supply- and demand-nodes for lithium-ion battery recyclers in Europe\n\n\nA Power BI dashboard of lithium-ion batteries in Europe created in Power BI.\n\n\n\nOptimization Results\nProjected resource flows for battery recycling in Europe in 2030.\n\n\nProjected market for supply- and demand-nodes for lithium-ion battery recyclers in Europe\n\n\nThe optimal network for lithium-ion battery recycling in Europe for different recycling technologies using linear programming in Python."
+  },
+  {
+    "objectID": "index.html#optimization-results",
+    "href": "index.html#optimization-results",
+    "title": "Erik Emilsson’s Portfolio",
+    "section": "Optimization Results",
+    "text": "Optimization Results\nProjected resource flows for battery recycling in Europe in 2030.\n\n\nProjected market for supply- and demand-nodes for lithium-ion battery recyclers in Europe\n\n\nThe optimal network for lithium-ion battery recycling in Europe for different recycling technologies using linear programming in Python."
+  },
+  {
+    "objectID": "index.html#optimize-flows-and-technology-selection-of-end-of-life-batteries-using-reverse-logistics-optimization",
+    "href": "index.html#optimize-flows-and-technology-selection-of-end-of-life-batteries-using-reverse-logistics-optimization",
+    "title": "Erik Emilsson’s Portfolio",
+    "section": "Optimize Flows and Technology Selection of End-of-Life Batteries Using Reverse Logistics Optimization",
+    "text": "Optimize Flows and Technology Selection of End-of-Life Batteries Using Reverse Logistics Optimization\n\nBusiness Problem and Solution\nThe European Union is looking to scale up its battery recycling capacity to hit recycling targets. Several options for key technologies for recycling batteries are considered within the scope of the European market. The market is dynamic, with a burgeoning number of actors opening up or increasing their production capacity in the coming years. The EU Commission wants to know:\n\nMap the battery producers and the potential recycled battery material buyers in Europe to understand the dynamics from 2022 to 2030, on both a geographical and aggregated level.\nOptimize the geographical placement(s) and the recycling technology selection based on facility costs and CO2-emissions.\n\n\n\nData Availability and Limitations\nThere is bottom-up and top-down data for\n\n\nEuropean Battery Market Mapping\nProjected resource flows for battery recycling in Europe in 2030.\n\n\nProjected market for supply- and demand-nodes for lithium-ion battery recyclers in Europe\n\n\n\n\nOptimization Results\nProjected resource flows for battery recycling in Europe in 2030.\n\n\nProjected market for supply- and demand-nodes for lithium-ion battery recyclers in Europe\n\n\nA Power BI dashboard gives users the ability to explore how the battery recycling market is expected to change for the years 2022, 2026, and 2030.\n\nThe optimal network for lithium-ion battery recycling in Europe for different recycling technologies using linear programming in Python."
+  },
+  {
+    "objectID": "index.html#optimize-placement-and-technology-selection-of-end-of-life-batteries-using-reverse-logistics-optimization",
+    "href": "index.html#optimize-placement-and-technology-selection-of-end-of-life-batteries-using-reverse-logistics-optimization",
+    "title": "Erik Emilsson’s Portfolio",
+    "section": "Optimize Placement and Technology Selection of End-of-Life Batteries Using Reverse Logistics Optimization",
+    "text": "Optimize Placement and Technology Selection of End-of-Life Batteries Using Reverse Logistics Optimization\n\nBusiness Problem and Solution\nThe European Union is looking to scale up its battery recycling capacity in response to a burgeoning battery market in order to hit recycling targets. Several options for key technologies for recycling batteries are considered within the scope of the European market. The market is dynamic and there is much uncertainty with regards to how the projected increase in battery production for electrification will impact the region’s circular economy and carbon emission targets. The EU Commission wants:\n\nTo understand what battery producers will enter the market and the potential recycled battery material buyers in Europe, on both a geographical and aggregated level.\nTo optimize the geographical placement(s) and the recycling technology selection based on facility costs and CO2-emissions.\n\n\n\nMethod and Data\nBottom-up data is scraped from market actor’s published volumes of batteries and their geograhical coordinates. Open-source material data from Argonne National Laboratories and basic chemistry calculations are used to linearly extrapolate the volumes between different battery chemistries and applications to a common functional unit.\nFor facility cost data, another engineer’s calculations of a technoeconomic assessment by country is used. For facility CO2-emission data, an LCA is done my LCA-practitioners in the same project and used in the optimization model.\nData processing and optimization is done in Python (Pandas and PuLP). Visualizations for analytical purposes are done using Python’s Plotly package and visualizations for stakeholders are done with Power BI.\n\n\nResults\nProjected resource flows for battery recycling in Europe in 2030.\n\n\nProjected market for supply- and demand-nodes for lithium-ion battery recyclers in Europe\n\n\nProjected resource flows for battery recycling in Europe in 2030.\n\n\nProjected market for supply- and demand-nodes for lithium-ion battery recyclers in Europe\n\n\nA Power BI dashboard gives users the ability to explore how the battery recycling market is expected to change for the years 2022, 2026, and 2030.\n\nThe optimal network for lithium-ion battery recycling in Europe for different recycling technologies using linear programming in Python.\n\nSee the Github Repo and EU-funded Project Report and Project Page"
+  },
+  {
+    "objectID": "projects/learning_projects.html#case-study-how-does-a-bike-share-navigate-speedy-success",
+    "href": "projects/learning_projects.html#case-study-how-does-a-bike-share-navigate-speedy-success",
+    "title": "Learning Projects",
+    "section": "Case Study How Does a Bike-Share Navigate Speedy Success",
+    "text": "Case Study How Does a Bike-Share Navigate Speedy Success\nScript from the Google Data Analytics Capstone project utilizing SQL in Bigquery’s sandbox environment and visualizations in R-language."
   }
 ]

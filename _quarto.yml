@@ -4,16 +4,18 @@ project:
     - projects/Eliminate/Copy of Sankey_B_2030.html
     - projects/Eliminate/Supply_and_Demand_Year_2030.html 
 
+theme: cosmo
+
 website:
   title: "My Portfolio"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - href: projects/projects.qmd
-        text: Projects
+      - href: projects/learning_projects.qmd
+        text: Learning Projects
       - href: about.qmd
-        text: About
+        text: More About Me
 
 #format:
 #  lumo-html: 

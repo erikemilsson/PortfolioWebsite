@@ -1,0 +1,14 @@
+---
+title: "Learning Projects"
+# subtitle: "Learning Projects."
+---
+
+Here I share some of my learning projects that I've done to gain experience in cloud and data services.
+
+## Case Study How Does a Bike-Share Navigate Speedy Success
+
+Script from the Google Data Analytics Capstone project utilizing SQL in Bigquery's sandbox environment and visualizations in R-language.
+
+
+
+<iframe src="./Capstone/Capstone.html" style="transform: scale(0.9); transform-origin: top left;" width="150%" height="1000px"></iframe> 

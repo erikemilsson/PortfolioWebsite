@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Erik Emilsson’s Portfolio Page – My Portfolio</title>
+<title>Erik Emilsson’s Portfolio – My Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,16 +66,14 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<style>html{ scroll-behavior: smooth; }</style>
 
 
-<link rel="stylesheet" href="site_libs/quarto-contrib/quarto-project/lumo/style.css">
 </head>
 
-<body class="floating nav-fixed slimcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -94,12 +92,12 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects/projects.html"> 
-<span class="menu-text">Projects</span></a>
+    <a class="nav-link" href="./projects/learning_projects.html"> 
+<span class="menu-text">Learning Projects</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
-<span class="menu-text">About</span></a>
+<span class="menu-text">More About Me</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -109,156 +107,88 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" style="position: relative">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-
-  <!-- This is the div in which the background image will be included -->
-  
-  <!-- This is the div in which the particles will be included -->
-  
-  <!-- Actual content on top of the particles-->
-  <div class="title-block-content">
-    <!-- Logo -->
-    
-    <!-- Title -->
-        <h1 class="title">Erik Emilsson’s Portfolio Page</h1>
-    
-    <hr>
-
-    <!-- Subtitle -->
-    
-    <!-- Author -->
-    
-    <!-- Date -->
-    
-    <!-- Particle.js script loaded from a CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-
-    <!-- use the particle js library with our own config (json file). -->
-    <script>
-      particlesJS.load(
-        "particles-js",
-        "https://raw.githubusercontent.com/holtzy/lumo/main/_extensions/lumo/particles.json"
-      );
-    </script>
-  </div>
-</header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active">
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#competency-overview" id="toc-competency-overview" class="nav-link" data-scroll-target="#competency-overview">Competency Overview</a></li>
+  <li><a href="#optimize-placement-and-technology-selection-of-end-of-life-batteries-using-reverse-logistics-optimization" id="toc-optimize-placement-and-technology-selection-of-end-of-life-batteries-using-reverse-logistics-optimization" class="nav-link active" data-scroll-target="#optimize-placement-and-technology-selection-of-end-of-life-batteries-using-reverse-logistics-optimization">Optimize Placement and Technology Selection of End-of-Life Batteries Using Reverse Logistics Optimization</a>
+  <ul class="collapse">
+  <li><a href="#business-problem-and-solution" id="toc-business-problem-and-solution" class="nav-link" data-scroll-target="#business-problem-and-solution">Business Problem and Solution</a></li>
+  <li><a href="#method-and-data" id="toc-method-and-data" class="nav-link" data-scroll-target="#method-and-data">Method and Data</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
+  </ul></li>
   </ul>
 </nav>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
-<style>
-  :root {
-    --primary-color: ;
-  }
-  .title-block-content {
-    position: relative;
-    padding-top: 130px;
-    padding-bottom: 130px;
-    max-width: 752px;
-    margin: auto;
-  }
-  .header-keyword {
-    color: rgb(59, 59, 59);
-    opacity: 0.5;
-    font-size: 14;
-  }
-  .octocat-container {
-    fill: var(--primary-color);
-    color: #fff;
-    position: absolute;
-    top: 0;
-    border: 0;
-    right: 0;
-  }
-  #particles-js {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-  }
-  .bg-image {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-</style>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Erik Emilsson’s Portfolio</h1>
+<p class="subtitle lead">Professional Projects</p>
+</div>
 
 
 
-<!------------------------- Code for the octocat (github Mascot) that will be included if a link to the github repo is provided. ------------------->
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
+</header>
 
-<section id="introduction" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Thank you for visiting my website.</p>
-<p>I created it to share with you the results from some of my projects that I’ve had the fortune to be a part of. I hope you find them interesting and that they can be a source of inspiration.</p>
 
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Contact me on <a href="www.linkedin.com/in/erikemilsson">LinkedIn</a></p>
+<p><strong>I help businesses optimize their strategies with cloud and data solutions. My expertise lies in logistics and supply chains, sustainability reporting, and materials engineering. Explore my portfolio to see how I can help your business thrive.</strong></p>
+<section id="optimize-placement-and-technology-selection-of-end-of-life-batteries-using-reverse-logistics-optimization" class="level2">
+<h2 class="anchored" data-anchor-id="optimize-placement-and-technology-selection-of-end-of-life-batteries-using-reverse-logistics-optimization">Optimize Placement and Technology Selection of End-of-Life Batteries Using Reverse Logistics Optimization</h2>
+<section id="business-problem-and-solution" class="level3">
+<h3 class="anchored" data-anchor-id="business-problem-and-solution">Business Problem and Solution</h3>
+<p><em>The European Union is looking to scale up its battery recycling capacity in response to a burgeoning battery market in order to hit recycling targets. Several options for key technologies for recycling batteries are considered within the scope of the European market. The market is dynamic and there is much uncertainty with regards to how the projected increase in battery production for electrification will impact the region’s circular economy and carbon emission targets. The EU Commission wants:</em></p>
 <ul>
-<li>I speak English</li>
-<li>Jag pratar svenska</li>
-<li>Yo hablo español</li>
+<li><em>To understand what battery producers will enter the market and the potential recycled battery material buyers in Europe, on both a geographical and aggregated level.</em></li>
+<li><em>To optimize the geographical placement(s) and the recycling technology selection based on facility costs and CO2-emissions.</em></li>
 </ul>
-</div></div><p>From my experience I am convinced that understanding and mastering <strong>data tools</strong> and <strong>cloud services</strong> is the way forward for effective engineering and making accessible technologies for businesses and individuals that can improve <em>efficiency</em>, <em>safety</em>, and <em>quality of life</em>.</p>
 </section>
-<section id="competency-overview" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="competency-overview">Competency Overview</h2>
-<p>I have over six year’s experience in <strong>sustainability management consulting</strong> in the product development &amp; purchasing departments of a multi-national manufacturing conglomerate. In parallel, I have <strong>data analytics/science</strong> experience from several EU-funded research projects within electrification and circular economy. From my formal education in B.Sc <strong>chemical engineering</strong> (with engineering physics), and a M.Sc. <strong>applied physics</strong> I have a solid understanding of <strong>applied mathematical modelling</strong> and <strong>statistics</strong>.</p>
-<p>I’m a certified <a href="https://learn.microsoft.com/api/credentials/share/en-us/ErikEmilsson-8069/5E435A2FA1F8B691?sharingId=BB4E4B973D67B45F"><strong>Power BI data analyst</strong></a> associate and I’m also certified in <a href="https://learn.microsoft.com/api/credentials/share/en-us/ErikEmilsson-8069/B0D068A103061930?sharingId=BB4E4B973D67B45F"><strong>Azure cloud</strong></a> and <a href="https://learn.microsoft.com/api/credentials/share/en-us/ErikEmilsson-8069/6F71EC0D6B0C4683?sharingId=BB4E4B973D67B45F"><strong>Azure AI</strong></a> fundamentals. I’m also well underway to become certified in end-to-end enterprise analytics as a <strong>Fabric Analytics Engineer</strong> associate.</p>
+<section id="method-and-data" class="level3">
+<h3 class="anchored" data-anchor-id="method-and-data">Method and Data</h3>
+<p>Bottom-up data is scraped from market actor’s published volumes of batteries and their geograhical coordinates. Open-source material data from Argonne National Laboratories and basic chemistry calculations are used to linearly extrapolate the volumes between different battery chemistries and applications to a common functional unit.</p>
+<p>For facility cost data, another engineer’s calculations of a technoeconomic assessment by country is used. For facility CO2-emission data, an LCA is done my LCA-practitioners in the same project and used in the optimization model.</p>
+<p>Data processing and optimization is done in Python (Pandas and PuLP). Visualizations for analytical purposes are done using Python’s Plotly package and visualizations for stakeholders are done with Power BI.</p>
+</section>
+<section id="results" class="level3">
+<h3 class="anchored" data-anchor-id="results">Results</h3>
+<p>Projected resource flows for battery recycling in Europe in 2030.</p>
+<iframe src="./projects/Eliminate/Sankey_B_2030.html" style="transform: scale(0.4); transform-origin: top left;" width="250%" height="700px">
+</iframe>
+<p>Projected market for supply- and demand-nodes for lithium-ion battery recyclers in Europe</p>
+<iframe src="./projects/Eliminate/Supply_and_Demand_Year_2030.html" style="transform: scale(0.8); transform-origin: top left;" width="250%" height="700px">
+</iframe>
+<p>Projected resource flows for battery recycling in Europe in 2030.</p>
+<iframe src="./projects/Eliminate/Sankey_B_2030.html" style="transform: scale(0.4); transform-origin: top left;" width="250%" height="700px">
+</iframe>
+<p>Projected market for supply- and demand-nodes for lithium-ion battery recyclers in Europe</p>
+<iframe src="./projects/Eliminate/Supply_and_Demand_Year_2030.html" style="transform: scale(0.8); transform-origin: top left;" width="250%" height="700px">
+</iframe>
+<p>A Power BI dashboard gives users the ability to explore how the battery recycling market is expected to change for the years 2022, 2026, and 2030.</p>
+<p><img src="./projects/Eliminate/eliminate_pbi.png" class="img-fluid"></p>
+<p>The optimal network for lithium-ion battery recycling in Europe for different recycling technologies using linear programming in Python.</p>
+<p><img src="./projects/Eliminate/Eliminate.PNG" class="img-fluid"></p>
+<p>See the <a href="https://github.com/erikemilsson/ELiMINATE_EU_MFA">Github Repo</a> and <a href="https://ivl.diva-portal.org/smash/get/diva2:1822105/FULLTEXT01.pdf">EU-funded Project Report</a> and <a href="https://www.era-learn.eu/network-information/networks/era-min-2/era-min-joint-call-2019/end-of-life-li-ion-battery-management-integration-and-technology-evaluation">Project Page</a></p>
 
-<div class="no-row-height column-margin column-container"><div class="">
-<p><em>“Innovation distinguishes between a leader and a follower.”</em> - Steve Jobs</p>
-</div></div><p>Some of my favourite technologies and programming languages that I have used in my professional projects are:</p>
-<ul>
-<li>Microsoft <strong>Power BI</strong> with <strong>DAX</strong> for enterprise dashboards.</li>
-<li>Microsoft <strong>Excel</strong> with <strong>Power Query</strong> for calculations and ETL.</li>
-<li><strong>Python</strong> for solving discrete optimization problems, ETL, and dynamic visuals.</li>
-<li><strong>VS Code</strong> as my main code editor.</li>
-<li>Microsoft <strong>Sharepoint</strong> and <strong>Teams</strong> for collaboration.</li>
-<li><strong>draw.io</strong> for data- and entity-modelling.</li>
-</ul>
-<p>I also have experience with the following from courses and personal projects:</p>
-<ul>
-<li><strong>T-SQL</strong> in Microsoft <strong>SQL Server</strong> and <strong>Azure SQL Services</strong> for learning about data warehouseing and enterprise analytics.</li>
-<li><strong>PostgreSQL</strong> for learning SQL for local data warehousing.</li>
-<li>Data Warehousing with <strong>Standard SQL</strong> in <strong>GCP’s BiqQuery</strong></li>
-<li><strong>Sqlite</strong> for learning SQL for Data Science</li>
-<li><strong>R</strong>-language data cleaning, transformations, and visualizations.</li>
-<li><strong>Tableau</strong> for creating visuals in dashboards.</li>
-<li><strong>PySpark</strong> for learning real-time enterprise analytics.</li>
-</ul>
 
-
+</section>
 </section>
 
 </main> <!-- /main -->
-<div class="footer-container">
-  <hr>
-  <p style="text-align: center; opacity: 0.5; font-size: 15px; max-width: 300px">
-    Made with the 
-    <a href="https://www.productive-r-workflow.com/r/bonus/lumo-quarto-template">Lumo</a> theme.
-  </p>
-</div>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -620,64 +550,25 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         }
       };
     }
-      const annoteTargets = window.document.querySelectorAll('.code-annotation-anchor');
-      for (let i=0; i<annoteTargets.length; i++) {
-        const annoteTarget = annoteTargets[i];
-        const targetCell = annoteTarget.getAttribute("data-target-cell");
-        const targetAnnotation = annoteTarget.getAttribute("data-target-annotation");
-        const contentFn = () => {
-          const content = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-          if (content) {
-            const tipContent = content.cloneNode(true);
-            tipContent.classList.add("code-annotation-tip-content");
-            return tipContent.outerHTML;
-          }
-        }
-        const config = {
-          allowHTML: true,
-          content: contentFn,
-          onShow: (instance) => {
-            selectCodeLines(instance.reference);
-            instance.reference.classList.add('code-annotation-active');
-            window.tippy.hideAll();
-          },
-          onHide: (instance) => {
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
             unselectCodeLines();
-            instance.reference.classList.remove('code-annotation-active');
-          },
-          maxWidth: 300,
-          delay: [50, 0],
-          duration: [200, 0],
-          offset: [5, 10],
-          arrow: true,
-          appendTo: function(el) {
-            return el.parentElement.parentElement.parentElement;
-          },
-          interactive: true,
-          interactiveBorder: 10,
-          theme: 'quarto',
-          placement: 'right',
-          popperOptions: {
-            modifiers: [
-            {
-              name: 'flip',
-              options: {
-                flipVariations: false, // true by default
-                allowedAutoPlacements: ['right'],
-                fallbackPlacements: ['right', 'top', 'top-start', 'top-end', 'bottom', 'bottom-start', 'bottom-end', 'left'],
-              },
-            },
-            {
-              name: 'preventOverflow',
-              options: {
-                mainAxis: false,
-                altAxis: false
-              }
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
             }
-            ]        
-          }      
-        };
-        window.tippy(annoteTarget, config); 
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
       }
   const findCites = (el) => {
     const parentEl = el.parentElement;
@@ -723,5 +614,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

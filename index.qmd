@@ -1,49 +1,54 @@
 ---
-title: "Erik Emilsson's Portfolio Page"
-# subtitle: 
+title: "Erik Emilsson's Portfolio"
+subtitle: Professional Projects
+toc: True
 ---
 
-## Introduction
+**I help businesses optimize their strategies with cloud and data solutions. My expertise lies in logistics and supply chains, sustainability reporting, and materials engineering. Explore my portfolio to see how I can help your business thrive.**
 
-Thank you for visiting my website. 
+## Optimize Placement and Technology Selection of End-of-Life Batteries Using Reverse Logistics Optimization
 
-I created it to share with you the results from some of my projects that I've had the fortune to be a part of. I hope you find them interesting and that they can be a source of inspiration.
+### Business Problem and Solution
 
-::: {.column-margin}
-Contact me on [LinkedIn](www.linkedin.com/in/erikemilsson)
+*The European Union is looking to scale up its battery recycling capacity in response to a burgeoning battery market in order to hit recycling targets. Several options for key technologies for recycling batteries are considered within the scope of the European market. The market is dynamic and there is much uncertainty with regards to how the projected increase in battery production for electrification will impact the region's circular economy and carbon emission targets. The EU Commission wants:*
 
-- I speak English
-- Jag pratar svenska
-- Yo hablo español
-:::
+- *To understand what battery producers will enter the market and the potential recycled battery material buyers in Europe, on both a geographical and aggregated level.*
+- *To optimize the geographical placement(s) and the recycling technology selection based on facility costs and CO2-emissions.*
 
-From my experience I am convinced that understanding and mastering **data tools** and **cloud services** is the way forward for effective engineering and making accessible technologies for businesses and individuals that can improve *efficiency*, *safety*, and *quality of life*.
+### Method and Data
 
-## Competency Overview
+Bottom-up data is scraped from market actor's published volumes of batteries and their geograhical coordinates. Open-source material data from Argonne National Laboratories and basic chemistry calculations are used to linearly extrapolate the volumes between different battery chemistries and applications to a common functional unit.
 
-I have over six year's experience in **sustainability management consulting** in the product development & purchasing departments of a multi-national manufacturing conglomerate. In parallel, I have **data analytics/science** experience from several EU-funded research projects within electrification and circular economy. From my formal education in B.Sc **chemical engineering** (with engineering physics), and a M.Sc. **applied physics** I have a solid understanding of **applied mathematical modelling** and **statistics**.
+For facility cost data, another engineer's calculations of a technoeconomic assessment by country is used. For facility CO2-emission data, an LCA is done my LCA-practitioners in the same project and used in the optimization model.
 
-I'm a certified [**Power BI data analyst**](https://learn.microsoft.com/api/credentials/share/en-us/ErikEmilsson-8069/5E435A2FA1F8B691?sharingId=BB4E4B973D67B45F) associate and I'm also certified in [**Azure cloud**](https://learn.microsoft.com/api/credentials/share/en-us/ErikEmilsson-8069/B0D068A103061930?sharingId=BB4E4B973D67B45F) and [**Azure AI**](https://learn.microsoft.com/api/credentials/share/en-us/ErikEmilsson-8069/6F71EC0D6B0C4683?sharingId=BB4E4B973D67B45F) fundamentals. I'm also well underway to become certified in end-to-end enterprise analytics as a **Fabric Analytics Engineer** associate. 
+Data processing and optimization is done in Python (Pandas and PuLP). Visualizations for analytical purposes are done using Python's Plotly package and visualizations for stakeholders are done with Power BI.
 
-::: {.column-margin}
-*"Innovation distinguishes between a leader and a follower."* - Steve Jobs
-:::
+### Results
 
-Some of my favourite technologies and programming languages that I have used in my professional projects are:
+Projected resource flows for battery recycling in Europe in 2030.
 
-- Microsoft **Power BI** with **DAX** for enterprise dashboards.
-- Microsoft **Excel** with **Power Query** for calculations and ETL.
-- **Python** for solving discrete optimization problems, ETL, and dynamic visuals.
-- **VS Code** as my main code editor.
-- Microsoft **Sharepoint** and **Teams** for collaboration.
-- **draw.io** for data- and entity-modelling.
+<iframe src="./projects/Eliminate/Sankey_B_2030.html" style="transform: scale(0.4); transform-origin: top left;" width="250%" height="700px"></iframe> 
 
-I also have experience with the following from courses and personal projects:
+Projected market for supply- and demand-nodes for lithium-ion battery recyclers in Europe
 
-- **T-SQL** in Microsoft **SQL Server** and **Azure SQL Services** for learning about data warehouseing and enterprise analytics.
-- **PostgreSQL** for learning SQL for local data warehousing.
-- Data Warehousing with **Standard SQL** in **GCP's BiqQuery** 
-- **Sqlite** for learning SQL for Data Science
-- **R**-language data cleaning, transformations, and visualizations.
-- **Tableau** for creating visuals in dashboards.
-- **PySpark** for learning real-time enterprise analytics.
+<iframe src="./projects/Eliminate/Supply_and_Demand_Year_2030.html" style="transform: scale(0.8); transform-origin: top left;" width="250%" height="700px"></iframe> 
+
+Projected resource flows for battery recycling in Europe in 2030.
+
+<iframe src="./projects/Eliminate/Sankey_B_2030.html" style="transform: scale(0.4); transform-origin: top left;" width="250%" height="700px"></iframe> 
+
+Projected market for supply- and demand-nodes for lithium-ion battery recyclers in Europe
+
+<iframe src="./projects/Eliminate/Supply_and_Demand_Year_2030.html" style="transform: scale(0.8); transform-origin: top left;" width="250%" height="700px"></iframe> 
+
+
+
+A Power BI dashboard gives users the ability to explore how the battery recycling market is expected to change for the years 2022, 2026, and 2030. 
+
+![](./projects/Eliminate/eliminate_pbi.png)
+
+The optimal network for lithium-ion battery recycling in Europe for different recycling technologies using linear programming in Python.
+
+![](./projects/Eliminate/Eliminate.PNG)
+
+See the [Github Repo](https://github.com/erikemilsson/ELiMINATE_EU_MFA) and [EU-funded Project Report](https://ivl.diva-portal.org/smash/get/diva2:1822105/FULLTEXT01.pdf) and [Project Page](https://www.era-learn.eu/network-information/networks/era-min-2/era-min-joint-call-2019/end-of-life-li-ion-battery-management-integration-and-technology-evaluation)
