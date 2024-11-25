@@ -1,18 +1,15 @@
 ---
 title: "Erik Emilsson's Portfolio"
-# subtitle: Professional Projects
 toc: True
-css: styles.css
-custom-blocks: 
-    viz-block:
-      classes: [viz-container]
 ---
 
 I help businesses optimize their strategies with cloud and data solutions. My expertise lies in logistics and supply chains, sustainability reporting, and materials engineering. Explore my portfolio to see how I can help your business thrive.
 
 ## Professional Projects
 
-### Optimize Location and Technology Selection of End-of-Life Batteries Using Reverse Logistics Optimization
+### End-of-Life Battery Recycling Facilty Location and Technology Selection with Reverse Logistics Optimization using Linear Programming
+
+[Github Repo](https://github.com/erikemilsson/ELiMINATE_EU_MFA), [EU-funded Project Report](https://ivl.diva-portal.org/smash/get/diva2:1822105/FULLTEXT01.pdf), and [Project Page](https://www.era-learn.eu/network-information/networks/era-min-2/era-min-joint-call-2019/end-of-life-li-ion-battery-management-integration-and-technology-evaluation)
 
 #### Business Problem and Solution
 
@@ -31,16 +28,16 @@ Data processing and optimization is done in Python (Pandas and PuLP). Visualizat
 
 #### Results
 
-Projected market for supply- and demand-nodes for lithium-ion battery recyclers in Europe.
+Potential supply (collection points) and demand (battery producer locations) were mapped with their maximum processing volumes. The data on how other networks of recyclers in the region are unknown and thus the optimization would be incomplete without additional insights. The choice was made to scale the facility's processing volumes to Europe's projected unrecycled battery scrap in 2026 and find the optimal facility location disregarding the other networks. The optimization results in conjunction with a dashboard showing the projected processing volumes of other recyclers (competitors) over time gave an overal picture of suitable facility locations.
 
-<iframe src="./projects/Eliminate/Supply_and_Demand_Year_2030.html" width="1000px" height="560px"></iframe>
+Below are projected market for supply- and demand-nodes for lithium-ion battery recyclers in Europe for 2030. The optimal cost and CO2-emissions were then calculated for combinations of supply- and demand-points. Different countries have different costs and CO2-emissions. The transportation costs were varied from between a low and high estimate based on usual costs and cost estimates for hazardous waste, as it was still not decided by the EU how battery waste would be classified. This tradeoff was done to focus on monetary costs.
 
-A Power BI dashboard gives users the ability to explore how the battery recycling market is expected to change for the years 2022, 2026, and 2030. 
+<iframe src="./projects/Eliminate/Supply_and_Demand_Year_2030.html" width="1000px" height="560px" class="framed-iframe"></iframe>
+
+Next are the optimal networks based on cost for the two transport cost estimates. For all technologies, regardless of transport estimate, the optimal number of facilities was one. The H2SO4 technology had the absolute lowest cost, with a network concentrated in Germany. A lower transport cost moved the optimzal network for MSA and H2SO4-NMC technologies to Northern Europe.
+
+![](./projects/Eliminate/results_cost.png)
+
+The Power BI dashboard gives users the an additional perspective to the best location for the facility, by breaking down competitors by volumes processed for the years 2022, 2026, and 2030. Central Europe has a high concentration of recyclers opening up, meaning competition in the area will be fierce. Clicking the circles gives the company name and volumes processed, providing valuable information to determine who will likely be the biggest competitors for adding a new facility to the European region.
 
 ![](./projects/Eliminate/eliminate_pbi.png)
-
-The optimal network for lithium-ion battery recycling in Europe for different recycling technologies using linear programming in Python.
-
-![](./projects/Eliminate/Eliminate.PNG)
-
-See the [Github Repo](https://github.com/erikemilsson/ELiMINATE_EU_MFA) and [EU-funded Project Report](https://ivl.diva-portal.org/smash/get/diva2:1822105/FULLTEXT01.pdf) and [Project Page](https://www.era-learn.eu/network-information/networks/era-min-2/era-min-joint-call-2019/end-of-life-li-ion-battery-management-integration-and-technology-evaluation)

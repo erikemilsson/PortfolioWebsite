@@ -1,7 +1,8 @@
 ---
 title: "Learning Projects"
-# subtitle: "Learning Projects."
 ---
+
+## Professional Projects
 
 Here I share some of my learning projects that I've done to gain experience in cloud and data services.
 

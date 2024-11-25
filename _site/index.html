@@ -68,7 +68,6 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -118,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#professional-projects" id="toc-professional-projects" class="nav-link active" data-scroll-target="#professional-projects">Professional Projects</a>
   <ul class="collapse">
-  <li><a href="#optimize-location-and-technology-selection-of-end-of-life-batteries-using-reverse-logistics-optimization" id="toc-optimize-location-and-technology-selection-of-end-of-life-batteries-using-reverse-logistics-optimization" class="nav-link" data-scroll-target="#optimize-location-and-technology-selection-of-end-of-life-batteries-using-reverse-logistics-optimization">Optimize Location and Technology Selection of End-of-Life Batteries Using Reverse Logistics Optimization</a></li>
+  <li><a href="#end-of-life-battery-recycling-facilty-location-and-technology-selection-with-reverse-logistics-optimization-using-linear-programming" id="toc-end-of-life-battery-recycling-facilty-location-and-technology-selection-with-reverse-logistics-optimization-using-linear-programming" class="nav-link" data-scroll-target="#end-of-life-battery-recycling-facilty-location-and-technology-selection-with-reverse-logistics-optimization-using-linear-programming">End-of-Life Battery Recycling Facilty Location and Technology Selection with Reverse Logistics Optimization using Linear Programming</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -148,8 +147,9 @@ ul.task-list li input[type="checkbox"] {
 <p>I help businesses optimize their strategies with cloud and data solutions. My expertise lies in logistics and supply chains, sustainability reporting, and materials engineering. Explore my portfolio to see how I can help your business thrive.</p>
 <section id="professional-projects" class="level2">
 <h2 class="anchored" data-anchor-id="professional-projects">Professional Projects</h2>
-<section id="optimize-location-and-technology-selection-of-end-of-life-batteries-using-reverse-logistics-optimization" class="level3">
-<h3 class="anchored" data-anchor-id="optimize-location-and-technology-selection-of-end-of-life-batteries-using-reverse-logistics-optimization">Optimize Location and Technology Selection of End-of-Life Batteries Using Reverse Logistics Optimization</h3>
+<section id="end-of-life-battery-recycling-facilty-location-and-technology-selection-with-reverse-logistics-optimization-using-linear-programming" class="level3">
+<h3 class="anchored" data-anchor-id="end-of-life-battery-recycling-facilty-location-and-technology-selection-with-reverse-logistics-optimization-using-linear-programming">End-of-Life Battery Recycling Facilty Location and Technology Selection with Reverse Logistics Optimization using Linear Programming</h3>
+<p><a href="https://github.com/erikemilsson/ELiMINATE_EU_MFA">Github Repo</a>, <a href="https://ivl.diva-portal.org/smash/get/diva2:1822105/FULLTEXT01.pdf">EU-funded Project Report</a>, and <a href="https://www.era-learn.eu/network-information/networks/era-min-2/era-min-joint-call-2019/end-of-life-li-ion-battery-management-integration-and-technology-evaluation">Project Page</a></p>
 <section id="business-problem-and-solution" class="level4">
 <h4 class="anchored" data-anchor-id="business-problem-and-solution">Business Problem and Solution</h4>
 <p><em>The European Union is looking to scale up its battery recycling capacity in response to a burgeoning battery market in order to hit recycling targets. Several options for key technologies for recycling batteries are considered within the scope of the European market. The market is dynamic and there is much uncertainty with regards to how the projected increase in battery production for electrification will impact the region’s circular economy and carbon emission targets. The EU Commission wants:</em></p>
@@ -166,14 +166,14 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="results" class="level4">
 <h4 class="anchored" data-anchor-id="results">Results</h4>
-<p>Projected market for supply- and demand-nodes for lithium-ion battery recyclers in Europe.</p>
-<iframe src="./projects/Eliminate/Supply_and_Demand_Year_2030.html" width="1000px" height="560px">
+<p>Potential supply (collection points) and demand (battery producer locations) were mapped with their maximum processing volumes. The data on how other networks of recyclers in the region are unknown and thus the optimization would be incomplete without additional insights. The choice was made to scale the facility’s processing volumes to Europe’s projected unrecycled battery scrap in 2026 and find the optimal facility location disregarding the other networks. The optimization results in conjunction with a dashboard showing the projected processing volumes of other recyclers (competitors) over time gave an overal picture of suitable facility locations.</p>
+<p>Below are projected market for supply- and demand-nodes for lithium-ion battery recyclers in Europe for 2030. The optimal cost and CO2-emissions were then calculated for combinations of supply- and demand-points. Different countries have different costs and CO2-emissions. The transportation costs were varied from between a low and high estimate based on usual costs and cost estimates for hazardous waste, as it was still not decided by the EU how battery waste would be classified. This tradeoff was done to focus on monetary costs.</p>
+<iframe src="./projects/Eliminate/Supply_and_Demand_Year_2030.html" width="1000px" height="560px" class="framed-iframe">
 </iframe>
-<p>A Power BI dashboard gives users the ability to explore how the battery recycling market is expected to change for the years 2022, 2026, and 2030.</p>
+<p>Next are the optimal networks based on cost for the two transport cost estimates. For all technologies, regardless of transport estimate, the optimal number of facilities was one. The H2SO4 technology had the absolute lowest cost, with a network concentrated in Germany. A lower transport cost moved the optimzal network for MSA and H2SO4-NMC technologies to Northern Europe.</p>
+<p><img src="./projects/Eliminate/results_cost.png" class="img-fluid"></p>
+<p>The Power BI dashboard gives users the an additional perspective to the best location for the facility, by breaking down competitors by volumes processed for the years 2022, 2026, and 2030. Central Europe has a high concentration of recyclers opening up, meaning competition in the area will be fierce. Clicking the circles gives the company name and volumes processed, providing valuable information to determine who will likely be the biggest competitors for adding a new facility to the European region.</p>
 <p><img src="./projects/Eliminate/eliminate_pbi.png" class="img-fluid"></p>
-<p>The optimal network for lithium-ion battery recycling in Europe for different recycling technologies using linear programming in Python.</p>
-<p><img src="./projects/Eliminate/Eliminate.PNG" class="img-fluid"></p>
-<p>See the <a href="https://github.com/erikemilsson/ELiMINATE_EU_MFA">Github Repo</a> and <a href="https://ivl.diva-portal.org/smash/get/diva2:1822105/FULLTEXT01.pdf">EU-funded Project Report</a> and <a href="https://www.era-learn.eu/network-information/networks/era-min-2/era-min-joint-call-2019/end-of-life-li-ion-battery-management-integration-and-technology-evaluation">Project Page</a></p>
 
 
 </section>
