@@ -1,6 +1,9 @@
 ---
-title: "More About Me"
+title: "Erik Emilsson's Portfolio"
+title-block-banner: "#f0f1f9"
 ---
+
+# More About Me
 
 I have over six year's experience in **sustainability management consulting** in the product development & purchasing departments of a multi-national manufacturing conglomerate. In parallel, I have **data analytics/science** experience from several EU-funded research projects within electrification and circular economy. From my formal education in B.Sc **chemical engineering** (with engineering physics), and a M.Sc. **applied physics** I have a solid understanding of **applied mathematical modelling** and **statistics**.
 
@@ -37,7 +40,7 @@ I'm currently living in Gothenburg Sweden and I've previously lived in
 - London, England
 - Houston, USA
 
-# Pictures
+## Pictures
 
 ![Tjörn, Sweden](./images/Erik_1_Tjörn.jpeg)
 

@@ -1,15 +1,18 @@
 ---
 title: "Erik Emilsson's Portfolio"
+title-block-banner: "#f0f1f9"
 toc: True
 ---
 
 I help businesses optimize their strategies with cloud and data solutions. My expertise lies in logistics and supply chains, sustainability reporting, and materials engineering. Explore my portfolio to see how I can help your business thrive.
 
-## Professional Projects
+# Professional Projects
 
 ### End-of-Life Battery Recycling Facilty Location and Technology Selection with Reverse Logistics Optimization using Linear Programming
 
 [Github Repo](https://github.com/erikemilsson/ELiMINATE_EU_MFA), [EU-funded Project Report](https://ivl.diva-portal.org/smash/get/diva2:1822105/FULLTEXT01.pdf), and [Project Page](https://www.era-learn.eu/network-information/networks/era-min-2/era-min-joint-call-2019/end-of-life-li-ion-battery-management-integration-and-technology-evaluation)
+
+**Technologies used: Python (Pandas, Plotly, PuLP) & Power BI**
 
 #### Business Problem and Solution
 
