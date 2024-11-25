@@ -17,15 +17,6 @@ website:
       - href: about.qmd
         text: More About Me
 
-#format:
-#  lumo-html: 
-#    logo:  # optional image file above the title, square
-#    github-repo: "https://github.com/erikemilsson"
-#    primary-color: "#2b3137" # github's secondary color from their color palette
-#    self-contained: true
-#    is-particlejs-enabled: false
-#    bg-image: "" # Optional image file for the header background
-
 execute: 
   freeze: auto  
   cache: true

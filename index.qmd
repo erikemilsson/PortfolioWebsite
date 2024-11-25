@@ -1,21 +1,27 @@
 ---
 title: "Erik Emilsson's Portfolio"
-subtitle: Professional Projects
+# subtitle: Professional Projects
 toc: True
+css: styles.css
+custom-blocks: 
+    viz-block:
+      classes: [viz-container]
 ---
 
-**I help businesses optimize their strategies with cloud and data solutions. My expertise lies in logistics and supply chains, sustainability reporting, and materials engineering. Explore my portfolio to see how I can help your business thrive.**
+I help businesses optimize their strategies with cloud and data solutions. My expertise lies in logistics and supply chains, sustainability reporting, and materials engineering. Explore my portfolio to see how I can help your business thrive.
 
-## Optimize Placement and Technology Selection of End-of-Life Batteries Using Reverse Logistics Optimization
+## Professional Projects
 
-### Business Problem and Solution
+### Optimize Location and Technology Selection of End-of-Life Batteries Using Reverse Logistics Optimization
+
+#### Business Problem and Solution
 
 *The European Union is looking to scale up its battery recycling capacity in response to a burgeoning battery market in order to hit recycling targets. Several options for key technologies for recycling batteries are considered within the scope of the European market. The market is dynamic and there is much uncertainty with regards to how the projected increase in battery production for electrification will impact the region's circular economy and carbon emission targets. The EU Commission wants:*
 
 - *To understand what battery producers will enter the market and the potential recycled battery material buyers in Europe, on both a geographical and aggregated level.*
 - *To optimize the geographical placement(s) and the recycling technology selection based on facility costs and CO2-emissions.*
 
-### Method and Data
+#### Method and Data
 
 Bottom-up data is scraped from market actor's published volumes of batteries and their geograhical coordinates. Open-source material data from Argonne National Laboratories and basic chemistry calculations are used to linearly extrapolate the volumes between different battery chemistries and applications to a common functional unit.
 
@@ -23,25 +29,11 @@ For facility cost data, another engineer's calculations of a technoeconomic asse
 
 Data processing and optimization is done in Python (Pandas and PuLP). Visualizations for analytical purposes are done using Python's Plotly package and visualizations for stakeholders are done with Power BI.
 
-### Results
+#### Results
 
-Projected resource flows for battery recycling in Europe in 2030.
+Projected market for supply- and demand-nodes for lithium-ion battery recyclers in Europe.
 
-<iframe src="./projects/Eliminate/Sankey_B_2030.html" style="transform: scale(0.4); transform-origin: top left;" width="250%" height="700px"></iframe> 
-
-Projected market for supply- and demand-nodes for lithium-ion battery recyclers in Europe
-
-<iframe src="./projects/Eliminate/Supply_and_Demand_Year_2030.html" style="transform: scale(0.8); transform-origin: top left;" width="250%" height="700px"></iframe> 
-
-Projected resource flows for battery recycling in Europe in 2030.
-
-<iframe src="./projects/Eliminate/Sankey_B_2030.html" style="transform: scale(0.4); transform-origin: top left;" width="250%" height="700px"></iframe> 
-
-Projected market for supply- and demand-nodes for lithium-ion battery recyclers in Europe
-
-<iframe src="./projects/Eliminate/Supply_and_Demand_Year_2030.html" style="transform: scale(0.8); transform-origin: top left;" width="250%" height="700px"></iframe> 
-
-
+<iframe src="./projects/Eliminate/Supply_and_Demand_Year_2030.html" width="1000px" height="560px"></iframe>
 
 A Power BI dashboard gives users the ability to explore how the battery recycling market is expected to change for the years 2022, 2026, and 2030. 
 
