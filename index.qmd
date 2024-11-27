@@ -4,11 +4,11 @@ title-block-banner: "#f0f1f9"
 toc: True
 ---
 
-I help businesses optimize their strategies with cloud and data solutions. My expertise lies in logistics and supply chains, sustainability reporting, and materials engineering. Explore my portfolio to see how I can help your business thrive.
+I specialize in cloud and data analytics to optimize logistics, supply chains, and sustainability strategies.
 
 # Professional Projects
 
-### End-of-Life Battery Recycling Facilty Location and Technology Selection with Reverse Logistics Optimization using Linear Programming
+### Battery Recycling Facility Optimization: Reverse Logistics & Linear Programming
 
 [Github Repo](https://github.com/erikemilsson/ELiMINATE_EU_MFA), [EU-funded Project Report](https://ivl.diva-portal.org/smash/get/diva2:1822105/FULLTEXT01.pdf), and [Project Page](https://www.era-learn.eu/network-information/networks/era-min-2/era-min-joint-call-2019/end-of-life-li-ion-battery-management-integration-and-technology-evaluation)
 
@@ -18,18 +18,22 @@ I help businesses optimize their strategies with cloud and data solutions. My ex
 
 *The European Union is looking to scale up its battery recycling capacity in response to a burgeoning battery market in order to hit recycling targets. Several options for key technologies for recycling batteries are considered within the scope of the European market. The market is dynamic and there is much uncertainty with regards to how the projected increase in battery production for electrification will impact the region's circular economy and carbon emission targets. The EU Commission wants:*
 
-- *To understand what battery producers will enter the market and the potential recycled battery material buyers in Europe, on both a geographical and aggregated level.*
-- *To optimize the geographical placement(s) and the recycling technology selection based on facility costs and CO2-emissions.*
+1. *To understand what battery producers will enter the market and the potential recycled battery material buyers in Europe, on both a geographical and aggregated level.*
+1. *To optimize the geographical placement(s) and the recycling technology selection based on facility costs and CO2-emissions.*
 
 #### Method and Data
 
-Bottom-up data is scraped from market actor's published volumes of batteries and their geograhical coordinates. Open-source material data from Argonne National Laboratories and basic chemistry calculations are used to linearly extrapolate the volumes between different battery chemistries and applications to a common functional unit.
+*This project involved scraping and processing market data to optimize facility locations and technologies. Tools like Python and Power BI were used for data analysis, modeling, and visualization.*
 
-For facility cost data, another engineer's calculations of a technoeconomic assessment by country is used. For facility CO2-emission data, an LCA is done my LCA-practitioners in the same project and used in the optimization model.
-
-Data processing and optimization is done in Python (Pandas and PuLP). Visualizations for analytical purposes are done using Python's Plotly package and visualizations for stakeholders are done with Power BI.
+- Bottom-up data is scraped from market actor's published volumes of batteries and their geograhical coordinates. Open-source material data from Argonne National Laboratories and basic chemistry calculations are used to linearly extrapolate the volumes between different battery chemistries and applications to a common functional unit.
+- For facility cost data, another engineer's calculations of a technoeconomic assessment by country is used. For facility CO2-emission data, an LCA is done my LCA-practitioners in the same project and used in the optimization model.
+- Data processing and optimization is done in Python (Pandas and PuLP). Visualizations for analytical purposes are done using Python's Plotly package and visualizations for stakeholders are done with Power BI.
 
 #### Results
+
+- Optimal location: Germany for H2SO4 technology based on cost.
+- Competitive landscape: High recycler concentration in Central Europe.
+- Dashboards enhance decision-making by identifying competitors and capacity projections.
 
 Potential supply (collection points) and demand (battery producer locations) were mapped with their maximum processing volumes. The data on how other networks of recyclers in the region are unknown and thus the optimization would be incomplete without additional insights. The choice was made to scale the facility's processing volumes to Europe's projected unrecycled battery scrap in 2026 and find the optimal facility location disregarding the other networks. The optimization results in conjunction with a dashboard showing the projected processing volumes of other recyclers (competitors) over time gave an overal picture of suitable facility locations.
 
