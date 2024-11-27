@@ -4,39 +4,36 @@ title-block-banner: "#f0f1f9"
 toc: True
 ---
 
-I specialize in cloud and data analytics to optimize logistics, supply chains, and sustainability strategies.
+I specialize in cloud and data analytics to optimize logistics, supply chains, and sustainability strategies. Contact me on [LinkedIn](www.linkedin.com/in/erikemilsson)
 
 # Professional Projects
 
-### Battery Recycling Facility Optimization: Reverse Logistics & Linear Programming
+## Optimizing European Battery Recycling Through a Data-Driven Location and Technology Analysis
 
 [Github Repo](https://github.com/erikemilsson/ELiMINATE_EU_MFA), [EU-funded Project Report](https://ivl.diva-portal.org/smash/get/diva2:1822105/FULLTEXT01.pdf), and [Project Page](https://www.era-learn.eu/network-information/networks/era-min-2/era-min-joint-call-2019/end-of-life-li-ion-battery-management-integration-and-technology-evaluation)
 
-**Technologies used: Python (Pandas, Plotly, PuLP) & Power BI**
+**Technologies used:** Python (Pandas, Plotly, PuLP) & Power BI.
 
-#### Business Problem and Solution
+**Business Problem:** The European Union aims to scale battery recycling to meet growing demand from the electric vehicle market while reducing carbon emissions. The challenge is determining optimal locations and selecting the right recycling technologies to close Europe's recycling capacity gap of 98,667 annual tonnes of battery cells scrap expected from 2026 onward.
 
-*The European Union is looking to scale up its battery recycling capacity in response to a burgeoning battery market in order to hit recycling targets. Several options for key technologies for recycling batteries are considered within the scope of the European market. The market is dynamic and there is much uncertainty with regards to how the projected increase in battery production for electrification will impact the region's circular economy and carbon emission targets. The EU Commission wants:*
+**Solution:** I developed an optimization model using geographic data and material flows to determine the best locations for recycling facilities. This model incorporates facility costs, CO2 emissions, and transportation costs, providing a roadmap for efficient and sustainable battery recycling in Europe.
 
-1. *To understand what battery producers will enter the market and the potential recycled battery material buyers in Europe, on both a geographical and aggregated level.*
-1. *To optimize the geographical placement(s) and the recycling technology selection based on facility costs and CO2-emissions.*
+### Method and Data
 
-#### Method and Data
+*Summary: This project involved scraping and processing market data to optimize facility locations and technologies. Tools like Python and Power BI were used for data analysis, modeling, and visualization.*
 
-*Summary:*
+Used bottom-up data scraping with open-data on battery bill-of-materials to linearly extrapolate and estimate battery volumes and geographical coordinates for each battery actor, addressing the lack of comprehensive market data. 
 
-*This project involved scraping and processing market data to optimize facility locations and technologies. Tools like Python and Power BI were used for data analysis, modeling, and visualization.*
+Collaborated with cost analyst and LCA expert to integrate technoeconomic assessment and CO2-emissions on a country-basis. 
 
-- Bottom-up data is scraped from market actor's published volumes of batteries and their geograhical coordinates. Open-source material data from Argonne National Laboratories and basic chemistry calculations are used to linearly extrapolate the volumes between different battery chemistries and applications to a common functional unit.
-- For facility cost data, another engineer's calculations of a technoeconomic assessment by country is used. For facility CO2-emission data, an LCA is done my LCA-practitioners in the same project and used in the optimization model.
-- Data processing and optimization is done in Python (Pandas and PuLP). Visualizations for analytical purposes are done using Python's Plotly package and visualizations for stakeholders are done with Power BI.
+Processed data and created an optimization model in Python with Pandas and PuLP packages. Created dynamic GIS and Sankey visualization using Python's Plotly package. Created dynamic Power BI dashboard with Power BI.
 
-#### Results
+### Results
 
 *Key Findings:*
 
-- *Optimal location: Germany for H2SO4 technology based on cost.*
-- *Competitive landscape: High recycler concentration in Central Europe.*
+- *Recommended a single H2SO4 facility in Germany as the most cost-effective solution based on current market projections and transportation cost estimates.*
+- *Competitive landscape: High recycler concentration in Central Europe and a second cluster with fewer recyclers in Northern Europe.*
 - *Dashboard enhances decision-making by identifying competitors and capacity projections.*
 
 Potential supply (collection points) and demand (battery producer locations) were mapped with their maximum processing volumes. The data on how other networks of recyclers in the region are unknown and thus the optimization would be incomplete without additional insights. The choice was made to scale the facility's processing volumes to Europe's projected unrecycled battery scrap in 2026 and find the optimal facility location disregarding the other networks. The optimization results in conjunction with a dashboard showing the projected processing volumes of other recyclers (competitors) over time gave an overal picture of suitable facility locations.
@@ -46,7 +43,7 @@ Below are projected market for supply- and demand-nodes for lithium-ion battery 
 ::: {style="text-align: center;"}
 
 <iframe src="./projects/Eliminate/Supply_and_Demand_Year_2030.html" width="1000px" height="520px" class="framed-iframe"></iframe>
-**Figure 1:** Projected supply and demand nodes for lithium-ion battery recyclers in Europe (2030).
+**Figure 1:** Projected battery recycler supply and demand nodes.
 
 :::
 
@@ -55,7 +52,7 @@ Next are the optimal networks based on cost for the two transport cost estimates
 ::: {style="text-align: center;"}
 
 ![](./projects/Eliminate/results_cost.png)
-**Figure 2:** Optimization results for 2030 accumulated costs (€) with minimum values.
+**Figure 2:** Optimal facility locations based on cost.
 
 :::
 
