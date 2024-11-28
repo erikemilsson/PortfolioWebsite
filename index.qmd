@@ -1,6 +1,6 @@
 ---
 title: "Erik Emilsson's Portfolio"
-title-block-banner: "#f0f1f9"
+title-block-banner: "#0275d8"
 toc: True
 ---
 

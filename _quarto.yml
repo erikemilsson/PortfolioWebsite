@@ -4,7 +4,10 @@ project:
     - projects/Eliminate/Copy of Sankey_B_2030.html
     - projects/Eliminate/Supply_and_Demand_Year_2030.html 
 
-theme: cosmo
+theme:
+  light: united
+  dark: darkly
+fontsize: 1.1em
 
 website:
   title: "My Portfolio"
