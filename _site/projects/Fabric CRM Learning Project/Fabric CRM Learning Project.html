@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Microsoft Fabric Critical Raw Materials Learning Project – My Portfolio</title>
+<title>Microsoft Fabric EU Critical Raw Materials Learning Project – My Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -119,7 +119,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Microsoft Fabric Critical Raw Materials Learning Project</h1>
+      <h1 class="title">Microsoft Fabric EU Critical Raw Materials Learning Project</h1>
                       </div>
   </div>
     
@@ -151,12 +151,37 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>In this project I use Microsoft Fabric to create dynamic custom visuals for the European Commission’s list of Critical Raw Materials (EU CRM). I also use annually updated Eurostat datasets to compare with the every-third-year updated EU CRM list datasets. These two approaches enable more insights to be gained from the EU CRM list, which is at the heart of the EU Critical Raw Material strategy and legislation (EU CRM Regulation).</p>
+<p>In this project I use Microsoft Fabric to create dynamic custom visuals based on static data and reports from the European Commission’s list of Critical Raw Materials (EU CRM). I also use annually updated Eurostat datasets to compare with the every-third-year updated EU CRM list datasets.</p>
+<p>These two approaches enable additional <em>and</em> fresher insights to be gained from the EU CRM list, which is at the heart of the EU Critical Raw Material strategy and legislation (EU CRM Regulation).</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>EU CRM measure and prioritize material resource use quantitatively and qualitatively through risks associated with each respective material, broken down into the main categories of:</p>
+<ol type="1">
+<li>Economic Importance</li>
+<li>Supply Risk</li>
+</ol>
+<p>Classical risk theory is used to calculate the overall risk for each material, based on the main categories which are, in turn, calculated using combinations of various indicators. See the EU CRM methdology document for how the indicators form the main categories <a href="https://op.europa.eu/en/publication-detail/-/publication/2d43b7e2-66ac-11e7-b2f2-01aa75ed71a1/language-en">Link</a>.</p>
+</div>
+</div>
 <section id="understanding-the-datasets" class="level2">
 <h2 class="anchored" data-anchor-id="understanding-the-datasets">Understanding the Datasets</h2>
 <p><strong>EU Critical Raw Materials Data</strong></p>
-<p>The data is currently published in pdfs on the <a href="https://single-market-economy.ec.europa.eu/sectors/raw-materials/areas-specific-interest/critical-raw-materials_en">EU Commission’s site for CRM</a>. Using Excel’s Power Query or Fabric’s Data Factory to extract the data from the pdf’s yields data with several errors. Additionally, the data is spread over several years and is not standardized, making future updates difficult to automate.</p>
-<p>The size of the datasets are relatively small and manageable. To solve this issue of ingesting data to my pipeline, I opted to get better control of the source data by combining Power Query with manual cleaning in Excel, and publishing to a public github repository (while of course following the EU Commission’s licensing requirements). This also enables other analysts and developers to use the datasets and tracks updates for future updates of the list through version control.</p>
+<p>The data is currently published in pdfs on the <a href="https://single-market-economy.ec.europa.eu/sectors/raw-materials/areas-specific-interest/critical-raw-materials_en">EU Commission’s site for CRM</a>. Using Excel’s Power Query or Fabric’s Data Factory to extract the data from the pdf’s yields data with critical errors in the dataframe structures, e.g.&nbsp;mismatching columns and cell values. Additionally, the data is spread over several years and is not standardized, making future updates difficult to automate.</p>
+<p>I explored the datasets while considering ways to effectively manage the data cleaning. The size of the datasets are relatively small and manageable, so I opted to get better control of the source data by combining Power Query with manual cleaning in Excel, and publishing to a <a href="https://github.com/erikemilsson/EU-Critical-Raw-Materials-CRM-Reports-Datasets">public github repository</a> (while of course following the EU Commission’s licensing requirements). This</p>
+<ul>
+<li>simplifies the data ingestion stage considerably,</li>
+<li>enables other analysts and developers to use the datasets and collaborate,</li>
+<li>creates transparency in data cleaning, and</li>
+<li>tracks updates for future updates of the list through version control.</li>
+</ul>
 <p><strong>Eurostat Data</strong></p>
 
 

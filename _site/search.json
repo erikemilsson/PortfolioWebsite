@@ -205,9 +205,9 @@
   {
     "objectID": "projects/Fabric CRM Learning Project/Fabric CRM Learning Project.html",
     "href": "projects/Fabric CRM Learning Project/Fabric CRM Learning Project.html",
-    "title": "Microsoft Fabric Critical Raw Materials Learning Project",
+    "title": "Microsoft Fabric EU Critical Raw Materials Learning Project",
     "section": "",
-    "text": "In this project I use Microsoft Fabric to create dynamic custom visuals for the European Commission’s list of Critical Raw Materials (EU CRM). I also use annually updated Eurostat datasets to compare with the every-third-year updated EU CRM list datasets. These two approaches enable more insights to be gained from the EU CRM list, which is at the heart of the EU Critical Raw Material strategy and legislation (EU CRM Regulation)."
+    "text": "In this project I use Microsoft Fabric to create dynamic custom visuals based on static data and reports from the European Commission’s list of Critical Raw Materials (EU CRM). I also use annually updated Eurostat datasets to compare with the every-third-year updated EU CRM list datasets.\nThese two approaches enable additional and fresher insights to be gained from the EU CRM list, which is at the heart of the EU Critical Raw Material strategy and legislation (EU CRM Regulation)."
   },
   {
     "objectID": "projects/Fabric CRM Learning Project/Fabric CRM Learning Project.html#method-and-data",
@@ -226,8 +226,8 @@
   {
     "objectID": "projects/Fabric CRM Learning Project/Fabric CRM Learning Project.html#understanding-the-datasets",
     "href": "projects/Fabric CRM Learning Project/Fabric CRM Learning Project.html#understanding-the-datasets",
-    "title": "Microsoft Fabric Critical Raw Materials Learning Project",
+    "title": "Microsoft Fabric EU Critical Raw Materials Learning Project",
     "section": "Understanding the Datasets",
-    "text": "Understanding the Datasets\nEU Critical Raw Materials Data\nThe data is currently published in pdfs on the EU Commission’s site for CRM. Using Excel’s Power Query or Fabric’s Data Factory to extract the data from the pdf’s yields data with several errors. Additionally, the data is spread over several years and is not standardized, making future updates difficult to automate.\nThe size of the datasets are relatively small and manageable. To solve this issue of ingesting data to my pipeline, I opted to get better control of the source data by combining Power Query with manual cleaning in Excel, and publishing to a public github repository (while of course following the EU Commission’s licensing requirements). This also enables other analysts and developers to use the datasets and tracks updates for future updates of the list through version control.\nEurostat Data"
+    "text": "Understanding the Datasets\nEU Critical Raw Materials Data\nThe data is currently published in pdfs on the EU Commission’s site for CRM. Using Excel’s Power Query or Fabric’s Data Factory to extract the data from the pdf’s yields data with critical errors in the dataframe structures, e.g. mismatching columns and cell values. Additionally, the data is spread over several years and is not standardized, making future updates difficult to automate.\nI explored the datasets while considering ways to effectively manage the data cleaning. The size of the datasets are relatively small and manageable, so I opted to get better control of the source data by combining Power Query with manual cleaning in Excel, and publishing to a public github repository (while of course following the EU Commission’s licensing requirements). This\n\nsimplifies the data ingestion stage considerably,\nenables other analysts and developers to use the datasets and collaborate,\ncreates transparency in data cleaning, and\ntracks updates for future updates of the list through version control.\n\nEurostat Data"
   }
 ]
