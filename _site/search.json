@@ -201,5 +201,33 @@
     "title": "Erik Emilsson’s Portfolio",
     "section": "",
     "text": "Tjörn, Sweden\n\n\n\n\n\nEating churros and hot chocolate in Barcelona, Spain\n\n\n\n\n\nVisiting Kuusakoski dismantling facilities in Skellefteå, Sweden\n\n\n\n\n\nVisiting Northvolt on a rainy day in Skellefteå, Sweden\n\n\n\n\n\nVisiting Tabletop Mountain in Cape Town, South Africa"
+  },
+  {
+    "objectID": "projects/Fabric CRM Learning Project/Fabric CRM Learning Project.html",
+    "href": "projects/Fabric CRM Learning Project/Fabric CRM Learning Project.html",
+    "title": "Microsoft Fabric Critical Raw Materials Learning Project",
+    "section": "",
+    "text": "In this project I use Microsoft Fabric to create dynamic custom visuals for the European Commission’s list of Critical Raw Materials (EU CRM). I also use annually updated Eurostat datasets to compare with the every-third-year updated EU CRM list datasets. These two approaches enable more insights to be gained from the EU CRM list, which is at the heart of the EU Critical Raw Material strategy and legislation (EU CRM Regulation)."
+  },
+  {
+    "objectID": "projects/Fabric CRM Learning Project/Fabric CRM Learning Project.html#method-and-data",
+    "href": "projects/Fabric CRM Learning Project/Fabric CRM Learning Project.html#method-and-data",
+    "title": "Microsoft Fabric Critical Raw Materials Learning Project",
+    "section": "Method and Data",
+    "text": "Method and Data\nEU Critical Raw Materials Data\nThe data is currently published in pdfs on the EU Commission’s site for CRM. Using Power Query in Microsoft Excel to extract the data from those pages yields unsatisfactory results. I opted to get better control of the data by using a Github repository, which also gives me the option to track changes in updates."
+  },
+  {
+    "objectID": "projects/Fabric CRM Learning Project/Fabric CRM Learning Project.html#datasets-import",
+    "href": "projects/Fabric CRM Learning Project/Fabric CRM Learning Project.html#datasets-import",
+    "title": "Microsoft Fabric Critical Raw Materials Learning Project",
+    "section": "Datasets import",
+    "text": "Datasets import\nEU Critical Raw Materials Data\nThe data is currently published in pdfs on the EU Commission’s site for CRM. Using Excel’s Power Query or Fabric’s Data Factory to extract the data from the pdf’s yields data with several errors. Additionally, the data is spread over several years and is not standardized, making future updates difficult to automate.\nThe size of the datasets are relatively small and manageable. To solve this issue of ingesting data to my pipeline, I opted to get better control of the source data by combining Power Query with manual cleaning in Excel, and publishing to a public github repository (while of course following the EU Commission’s licensing requirements). This also enables other analysts and developers to use the datasets, and tracks updates for future updates of the list."
+  },
+  {
+    "objectID": "projects/Fabric CRM Learning Project/Fabric CRM Learning Project.html#understanding-the-datasets",
+    "href": "projects/Fabric CRM Learning Project/Fabric CRM Learning Project.html#understanding-the-datasets",
+    "title": "Microsoft Fabric Critical Raw Materials Learning Project",
+    "section": "Understanding the Datasets",
+    "text": "Understanding the Datasets\nEU Critical Raw Materials Data\nThe data is currently published in pdfs on the EU Commission’s site for CRM. Using Excel’s Power Query or Fabric’s Data Factory to extract the data from the pdf’s yields data with several errors. Additionally, the data is spread over several years and is not standardized, making future updates difficult to automate.\nThe size of the datasets are relatively small and manageable. To solve this issue of ingesting data to my pipeline, I opted to get better control of the source data by combining Power Query with manual cleaning in Excel, and publishing to a public github repository (while of course following the EU Commission’s licensing requirements). This also enables other analysts and developers to use the datasets and tracks updates for future updates of the list through version control.\nEurostat Data"
   }
 ]

@@ -1,0 +1,18 @@
+---
+title: "Microsoft Fabric Critical Raw Materials Learning Project"
+title-block-banner: "#0275d8"
+toc: True
+---
+
+In this project I use Microsoft Fabric to create dynamic custom visuals for the European Commission's list of Critical Raw Materials (EU CRM). I also use annually updated Eurostat datasets to compare with the every-third-year updated EU CRM list datasets. These two approaches enable more insights to be gained from the EU CRM list, which is at the heart of the EU Critical Raw Material strategy and legislation (EU CRM Regulation).
+
+## Understanding the Datasets
+
+**EU Critical Raw Materials Data**
+
+The data is currently published in pdfs on the [EU Commission's site for CRM](https://single-market-economy.ec.europa.eu/sectors/raw-materials/areas-specific-interest/critical-raw-materials_en). Using Excel's Power Query or Fabric's Data Factory to extract the data from the pdf's yields data with several errors. Additionally, the data is spread over several years and is not standardized, making future updates difficult to automate.
+
+The size of the datasets are relatively small and manageable. To solve this issue of ingesting data to my pipeline, I opted to get better control of the source data by combining Power Query with manual cleaning in Excel, and publishing to a public github repository (while of course following the EU Commission's licensing requirements). This also enables other analysts and developers to use the datasets and tracks updates for future updates of the list through version control.
+
+**Eurostat Data**
+
