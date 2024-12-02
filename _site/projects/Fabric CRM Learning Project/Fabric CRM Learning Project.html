@@ -140,7 +140,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#understanding-the-datasets" id="toc-understanding-the-datasets" class="nav-link active" data-scroll-target="#understanding-the-datasets">Understanding the Datasets</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#project" id="toc-project" class="nav-link" data-scroll-target="#project">Project</a>
+  <ul class="collapse">
+  <li><a href="#importing-to-data-factory" id="toc-importing-to-data-factory" class="nav-link" data-scroll-target="#importing-to-data-factory">Importing to Data Factory</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -151,8 +155,21 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<section id="summary" class="level1">
+<h1>Summary</h1>
+<p>An end-to-end data analytics project in Microsoft Fabric (Data Factory &amp; Power BI) using public statistics data from pdfs and APIs. The project aims to enhance existing ad-hoc analyses found in pdf-reports by connecting to new data sources.</p>
+<p>The analyses aim to provide insights into risk of being dependent on and sourcing raw materials from a selection of different indicator categories, including</p>
+<ul>
+<li>material criticality (from the EU Commissions pdf reports),</li>
+<li>market development (from the Eurostat API),</li>
+<li>price development (from Trading Economics API), and</li>
+<li>environmental impact (from the Yale Environmental Performance Index, EPI).</li>
+</ul>
+</section>
+<section id="project" class="level1">
+<h1>Project</h1>
 <p>In this project I use Microsoft Fabric to create dynamic custom visuals based on static data and reports from the European Commission’s list of Critical Raw Materials (EU CRM). I also use annually updated Eurostat datasets to compare with the every-third-year updated EU CRM list datasets.</p>
-<p>These two approaches enable additional <em>and</em> fresher insights to be gained from the EU CRM list, which is at the heart of the EU Critical Raw Material strategy and legislation (EU CRM Regulation).</p>
+<p>These two approaches enable additional <em>and</em> fresher insights to be gained from the EU CRM list, which is at the heart of the EU Critical Raw Material strategy and legislation (<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202401252">EU CRM Regulation</a>).</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -171,9 +188,23 @@ Note
 <p>Classical risk theory is used to calculate the overall risk for each material, based on the main categories which are, in turn, calculated using combinations of various indicators. See the EU CRM methdology document for how the indicators form the main categories <a href="https://op.europa.eu/en/publication-detail/-/publication/2d43b7e2-66ac-11e7-b2f2-01aa75ed71a1/language-en">Link</a>.</p>
 </div>
 </div>
-<section id="understanding-the-datasets" class="level2">
-<h2 class="anchored" data-anchor-id="understanding-the-datasets">Understanding the Datasets</h2>
-<p><strong>EU Critical Raw Materials Data</strong></p>
+<section id="importing-to-data-factory" class="level2">
+<h2 class="anchored" data-anchor-id="importing-to-data-factory">Importing to Data Factory</h2>
+<p>To start I open up a template for ‘Basic data analytics’ in Data Factory and name the workspace ‘CRM Learning Project’, which gives me just the necessary workloads I need for my analysis, namely:</p>
+<ul>
+<li>Data Factory for orchestrating</li>
+<li>Data Warehouse for importing structured data</li>
+<li>Real-Time Intelligence to test out live price data, and</li>
+<li>Power BI for visualizations.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/DataFactory_basic_data_analytics_template.png" class="img-fluid figure-img"></p>
+<figcaption>Create a new Fabric workspace in Data Factory using template for basic data analytics</figcaption>
+</figure>
+</div>
+<section id="importing-eu-critical-raw-materials-data" class="level4">
+<h4 class="anchored" data-anchor-id="importing-eu-critical-raw-materials-data">Importing EU Critical Raw Materials Data</h4>
 <p>The data is currently published in pdfs on the <a href="https://single-market-economy.ec.europa.eu/sectors/raw-materials/areas-specific-interest/critical-raw-materials_en">EU Commission’s site for CRM</a>. Using Excel’s Power Query or Fabric’s Data Factory to extract the data from the pdf’s yields data with critical errors in the dataframe structures, e.g.&nbsp;mismatching columns and cell values. Additionally, the data is spread over several years and is not standardized, making future updates difficult to automate.</p>
 <p>I explored the datasets while considering ways to effectively manage the data cleaning. The size of the datasets are relatively small and manageable, so I opted to get better control of the source data by combining Power Query with manual cleaning in Excel, and publishing to a <a href="https://github.com/erikemilsson/EU-Critical-Raw-Materials-CRM-Reports-Datasets">public github repository</a> (while of course following the EU Commission’s licensing requirements). This</p>
 <ul>
@@ -182,9 +213,50 @@ Note
 <li>creates transparency in data cleaning, and</li>
 <li>tracks updates for future updates of the list through version control.</li>
 </ul>
-<p><strong>Eurostat Data</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/github_repo.png" class="img-fluid figure-img"></p>
+<figcaption>Github repo screenshot EU-Critical-Raw-Materials-CRM-Reports-Datasets</figcaption>
+</figure>
+</div>
+<p>To import to Data Factory, I create a Dataflow Gen2 connect to each csv file using the Web API connector and enter the github repository csv-file URL and set ‘Authentication kind’ to <em>Anonymous</em> since the data is public.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To link to the csv files I used the direct Github link address structure: <code>https://raw.githubusercontent.com/&lt;username&gt;/&lt;repository&gt;/&lt;branch&gt;/&lt;filepath&gt;/&lt;filename&gt;.csv</code></p>
+</div>
+</div>
+<p>During import I performed some simpler cleaning:</p>
+<ul>
+<li>In the ‘Share’-column I removed rows with the value ‘&lt;1%’.</li>
+<li>In the ‘Share’-column I
+<ul>
+<li>removed the percent signs with the ‘Replace values’ function,</li>
+<li>divided the values by 100 using the</li>
+<li>changed the datatype to ‘Whole Number’ temporarily so i can perform standard mathematical operations with the function under the ‘Transform’ tab, and</li>
+<li>changed the datatype to percent.</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/contains_<.png" class="img-fluid figure-img"></p>
+<figcaption>Remove rows that contain ‘&lt;1%’</figcaption>
+</figure>
+</div>
+</section>
+<section id="importing-eurostat-data" class="level4">
+<h4 class="anchored" data-anchor-id="importing-eurostat-data">Importing Eurostat Data</h4>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
