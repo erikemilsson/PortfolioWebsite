@@ -15,8 +15,6 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: projects/learning_projects.qmd
-        text: Learning Projects
       - href: about.qmd
         text: More About Me
 
