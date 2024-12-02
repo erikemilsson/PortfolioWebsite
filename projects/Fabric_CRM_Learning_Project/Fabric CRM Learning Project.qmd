@@ -78,4 +78,4 @@ During import I performed some simpler cleaning:
 
 #### Importing Yale Environmental Performance Indicator (EPI) Data
 
-Yale EPI data is published annually in csv files and can be found [here](https://epi.yale.edu/downloads). The files are 
+Yale EPI data is published annually in csv files and can be found [here](https://epi.yale.edu/downloads). I opted to upload the files to my portfolio repository because they couldn't be uploaded directly to Fabric as it isn't tied to a OneDrive for Business account.
