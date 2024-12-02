@@ -74,8 +74,19 @@ During import I performed some simpler cleaning:
 
 ![Remove rows that contain '<1%'](./images/contains_<.png)
 
-#### Importing Eurostat Data
+#### Importing Eurostat Data (tbc)
+
+Import additional and/or updated statistics on a country-level.
+
+#### Importing (tbc)
+
+Import price data & market trends from e.g. Trading Economics API, World Bank Commodity Markets or IMF Primary Commodity Prices.
 
 #### Importing Yale Environmental Performance Indicator (EPI) Data
 
 Yale EPI data is published annually in csv files and can be found [here](https://epi.yale.edu/downloads). I opted to upload the files to my portfolio repository because they couldn't be uploaded directly to Fabric as it isn't tied to a OneDrive for Business account.
+
+## Create a data warehouse
+
+After collecting the data I create a data warehouse for my structured data and name it 'CRM_Data_Warehouse'. From here I can start creating schemas and store the data used for analytics in Power BI.
+
