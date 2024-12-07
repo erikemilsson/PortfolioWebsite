@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Microsoft Fabric EU Critical Raw Materials Learning Project – My Portfolio</title>
+<title>Erik Emilsson’s Portfolio – My Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -100,10 +100,6 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../projects/learning_projects.html"> 
-<span class="menu-text">Learning Projects</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">More About Me</span></a>
   </li>  
@@ -119,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Microsoft Fabric EU Critical Raw Materials Learning Project</h1>
+      <h1 class="title">Erik Emilsson’s Portfolio</h1>
                       </div>
   </div>
     
@@ -140,11 +136,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
-  <li><a href="#project" id="toc-project" class="nav-link" data-scroll-target="#project">Project</a>
+  <li><a href="#microsoft-fabric-eu-critical-raw-materials-learning-project" id="toc-microsoft-fabric-eu-critical-raw-materials-learning-project" class="nav-link active" data-scroll-target="#microsoft-fabric-eu-critical-raw-materials-learning-project">Microsoft Fabric EU Critical Raw Materials Learning Project</a>
+  <ul class="collapse">
+  <li><a href="#executive-summary" id="toc-executive-summary" class="nav-link" data-scroll-target="#executive-summary">Executive Summary</a></li>
+  <li><a href="#project-walkthrough" id="toc-project-walkthrough" class="nav-link" data-scroll-target="#project-walkthrough">Project Walkthrough</a>
   <ul class="collapse">
   <li><a href="#importing-to-data-factory" id="toc-importing-to-data-factory" class="nav-link" data-scroll-target="#importing-to-data-factory">Importing to Data Factory</a></li>
   <li><a href="#create-a-data-warehouse" id="toc-create-a-data-warehouse" class="nav-link" data-scroll-target="#create-a-data-warehouse">Create a data warehouse</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -156,8 +155,10 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="summary" class="level1">
-<h1>Summary</h1>
+<section id="microsoft-fabric-eu-critical-raw-materials-learning-project" class="level1">
+<h1>Microsoft Fabric EU Critical Raw Materials Learning Project</h1>
+<section id="executive-summary" class="level2">
+<h2 class="anchored" data-anchor-id="executive-summary">Executive Summary</h2>
 <p>An end-to-end data analytics project in Microsoft Fabric (Data Factory &amp; Power BI) using public statistics data from pdfs and APIs. The project aims to enhance existing ad-hoc analyses found in pdf-reports by connecting to new data sources.</p>
 <p>The analyses aim to provide insights into risk of being dependent on and sourcing raw materials from a selection of different indicator categories, including</p>
 <ul>
@@ -167,8 +168,8 @@ ul.task-list li input[type="checkbox"] {
 <li>environmental impact (from the Yale Environmental Performance Index, EPI).</li>
 </ul>
 </section>
-<section id="project" class="level1">
-<h1>Project</h1>
+<section id="project-walkthrough" class="level2">
+<h2 class="anchored" data-anchor-id="project-walkthrough">Project Walkthrough</h2>
 <p>In this project I use Microsoft Fabric to create dynamic custom visuals based on static data and reports from the European Commission’s list of Critical Raw Materials (EU CRM). I also use annually updated Eurostat datasets to compare with the every-third-year updated EU CRM list datasets.</p>
 <p>These two approaches enable additional <em>and</em> fresher insights to be gained from the EU CRM list, which is at the heart of the EU Critical Raw Material strategy and legislation (<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202401252">EU CRM Regulation</a>).</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -189,8 +190,8 @@ Note
 <p>Classical risk theory is used to calculate the overall risk for each material, based on the main categories which are, in turn, calculated using combinations of various indicators. See the EU CRM methdology document for how the indicators form the main categories <a href="https://op.europa.eu/en/publication-detail/-/publication/2d43b7e2-66ac-11e7-b2f2-01aa75ed71a1/language-en">Link</a>.</p>
 </div>
 </div>
-<section id="importing-to-data-factory" class="level2">
-<h2 class="anchored" data-anchor-id="importing-to-data-factory">Importing to Data Factory</h2>
+<section id="importing-to-data-factory" class="level3">
+<h3 class="anchored" data-anchor-id="importing-to-data-factory">Importing to Data Factory</h3>
 <p>To start I open up a template for ‘Basic data analytics’ in Data Factory and name the workspace ‘CRM Learning Project’, which gives me just the necessary workloads I need for my analysis, namely:</p>
 <ul>
 <li>Data Factory for orchestrating</li>
@@ -207,7 +208,7 @@ Note
 <section id="importing-eu-critical-raw-materials-data" class="level4">
 <h4 class="anchored" data-anchor-id="importing-eu-critical-raw-materials-data">Importing EU Critical Raw Materials Data</h4>
 <p>The data is currently published in pdfs on the <a href="https://single-market-economy.ec.europa.eu/sectors/raw-materials/areas-specific-interest/critical-raw-materials_en">EU Commission’s site for CRM</a>. Using Excel’s Power Query or Fabric’s Data Factory to extract the data from the pdf’s yields data with critical errors in the dataframe structures, e.g.&nbsp;mismatching columns and cell values. Additionally, the data is spread over several years and is not standardized, making future updates difficult to automate.</p>
-<p>I explored the datasets while considering ways to effectively manage the data cleaning. The size of the datasets are relatively small and manageable, so I opted to get better control of the source data by combining Power Query with manual cleaning in Excel, and publishing to a <a href="https://github.com/erikemilsson/EU-Critical-Raw-Materials-CRM-Reports-Datasets">public github repository</a> (while of course following the EU Commission’s licensing requirements). This</p>
+<p>I explored the datasets while considering ways to effectively manage the data cleaning. The size of the datasets are relatively small and manageable, so I opted to get better control of the source data by combining Power Query with manual cleaning in Excel, and publishing to a <a href="https://github.com/erikemilsson/EU-Critical-Raw-Materials-CRM-Reports-Datasets">public github repository</a> (while of course following the EU Commission’s licensing requirements). This:</p>
 <ul>
 <li>simplifies the data ingestion stage considerably,</li>
 <li>enables other analysts and developers to use the datasets and collaborate,</li>
@@ -255,9 +256,17 @@ Note
 </figure>
 </div>
 </section>
-<section id="importing-eurostat-data-tbc" class="level4">
-<h4 class="anchored" data-anchor-id="importing-eurostat-data-tbc">Importing Eurostat Data (tbc)</h4>
-<p>Import additional and/or updated statistics on a country-level.</p>
+<section id="importing-eurostat-data" class="level4">
+<h4 class="anchored" data-anchor-id="importing-eurostat-data">Importing Eurostat Data</h4>
+<p>Eurostat contains a wealth of information for the EU on the country-level, but for this analysis I used it to connect to a specific respective dataset in the static EU CRM report for comparison. The <a href="https://op.europa.eu/en/publication-detail/-/publication/2d43b7e2-66ac-11e7-b2f2-01aa75ed71a1">methdology report</a> states that ‘NACE v2’ categories indicating ‘production in industry’ to describe each country’s demands.</p>
+<p>Import by going to the <a href="https://ec.europa.eu/eurostat/databrowser/explore/all/all_themes?lang=en&amp;display=list&amp;sort=category">Eurostat database</a>, select ‘Industry, trade and services’, and ‘Short-term business statistics’, and ‘Industry’, and ‘Production in Industry’. Then click on the ‘Production in industry - annual data’ dataset</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/Eurostat_prod_db.png" class="img-fluid figure-img"></p>
+<figcaption>Click through to access the production dataset in Eurostat.</figcaption>
+</figure>
+</div>
+<p>In the next page, set the filters to only include the NACE rev. 2 activities C19-C31 based on the existing activities in the static EU Critical Raw Materials Data which I will later connect to in the data model. After the filtering, clicking ‘download’ will open up options. Clicking ‘Advanced settings’ opens up additional options from which choosing the ‘SDMX-ML Genergic Data (2.1)’ will give a link to which the Dataflow Gen2 connector can use the ‘SIS-CC SDMX’ API connector with. Finally, selecting only the relevant rows and setting the datatypes will yield the desired table for publishing in Data Factory.</p>
 </section>
 <section id="importing-tbc" class="level4">
 <h4 class="anchored" data-anchor-id="importing-tbc">Importing (tbc)</h4>
@@ -265,14 +274,15 @@ Note
 </section>
 <section id="importing-yale-environmental-performance-indicator-epi-data" class="level4">
 <h4 class="anchored" data-anchor-id="importing-yale-environmental-performance-indicator-epi-data">Importing Yale Environmental Performance Indicator (EPI) Data</h4>
-<p>Yale EPI data is published annually in csv files and can be found <a href="https://epi.yale.edu/downloads">here</a>. I opted to upload the files to my portfolio repository because they couldn’t be uploaded directly to Fabric as it isn’t tied to a OneDrive for Business account.</p>
+<p>Yale EPI data is published annually in csv files and can be found <a href="https://epi.yale.edu/downloads">here</a>. I uploaded the files to my github portfolio repository because they couldn’t be uploaded directly to Fabric as it wasn’t tied to a OneDrive for Business account.</p>
 </section>
 </section>
-<section id="create-a-data-warehouse" class="level2">
-<h2 class="anchored" data-anchor-id="create-a-data-warehouse">Create a data warehouse</h2>
+<section id="create-a-data-warehouse" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-data-warehouse">Create a data warehouse</h3>
 <p>After collecting the data I create a data warehouse for my structured data and name it ‘CRM_Data_Warehouse’. From here I can start creating schemas and store the data used for analytics in Power BI.</p>
 
 
+</section>
 </section>
 </section>
 
