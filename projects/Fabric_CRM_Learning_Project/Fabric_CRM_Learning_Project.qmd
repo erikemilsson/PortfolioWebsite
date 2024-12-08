@@ -86,7 +86,7 @@ Import by going to the [Eurostat database](https://ec.europa.eu/eurostat/databro
 
 In the next page, set the filters to only include the NACE rev. 2 activities C19-C31 based on the existing activities in the static EU Critical Raw Materials Data which I will later connect to in the data model. After the filtering, clicking 'download' will open up options. Clicking 'Advanced settings' opens up additional options from which choosing the 'SDMX-ML Genergic Data (2.1)' will give a link to which the Dataflow Gen2 connector can use the 'SIS-CC SDMX' API connector with. Finally, selecting only the relevant rows and setting the datatypes will yield the desired table for publishing in Data Factory.
 
-#### Importing (tbc)
+#### Importing price data (tbc)
 
 Import price data & market trends from e.g. Trading Economics API, World Bank Commodity Markets or IMF Primary Commodity Prices.
 
@@ -94,7 +94,7 @@ Import price data & market trends from e.g. Trading Economics API, World Bank Co
 
 Yale EPI data is published annually in csv files and can be found [here](https://epi.yale.edu/downloads). I uploaded the files to my github portfolio repository because they couldn't be uploaded directly to Fabric as it wasn't tied to a OneDrive for Business account.
 
-### Create a data warehouse
+### Create a data warehouse (tbc)
 
 After collecting the data I create a data warehouse for my structured data and name it 'CRM_Data_Warehouse'. From here I can start creating schemas and store the data used for analytics in Power BI.
 
