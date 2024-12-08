@@ -141,8 +141,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#executive-summary" id="toc-executive-summary" class="nav-link" data-scroll-target="#executive-summary">Executive Summary</a></li>
   <li><a href="#project-walkthrough" id="toc-project-walkthrough" class="nav-link" data-scroll-target="#project-walkthrough">Project Walkthrough</a>
   <ul class="collapse">
-  <li><a href="#importing-to-data-factory" id="toc-importing-to-data-factory" class="nav-link" data-scroll-target="#importing-to-data-factory">Importing to Data Factory</a></li>
-  <li><a href="#create-a-data-warehouse" id="toc-create-a-data-warehouse" class="nav-link" data-scroll-target="#create-a-data-warehouse">Create a data warehouse</a></li>
+  <li><a href="#ingesting-data-with-dataflows-in-data-factory" id="toc-ingesting-data-with-dataflows-in-data-factory" class="nav-link" data-scroll-target="#ingesting-data-with-dataflows-in-data-factory">Ingesting data with dataflows in Data Factory</a></li>
+  <li><a href="#creating-a-data-warehouse-and-datalake-to-house-data-in-parquet-format-tbc" id="toc-creating-a-data-warehouse-and-datalake-to-house-data-in-parquet-format-tbc" class="nav-link" data-scroll-target="#creating-a-data-warehouse-and-datalake-to-house-data-in-parquet-format-tbc">Creating a data warehouse and datalake to house data in Parquet format (tbc)</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -159,14 +159,21 @@ ul.task-list li input[type="checkbox"] {
 <h1>Microsoft Fabric EU Critical Raw Materials Learning Project</h1>
 <section id="executive-summary" class="level2">
 <h2 class="anchored" data-anchor-id="executive-summary">Executive Summary</h2>
-<p>An end-to-end data analytics project in Microsoft Fabric (Data Factory &amp; Power BI) using public statistics data from pdfs and APIs. The project aims to enhance existing ad-hoc analyses found in pdf-reports by connecting to new data sources.</p>
-<p>The analyses aim to provide insights into risk of being dependent on and sourcing raw materials from a selection of different indicator categories, including</p>
+<p><strong>Project and Data Overview:</strong> An end-to-end data analytics project in Microsoft Fabric (a SaaS data platform) using publicly available statistics data from pdfs and APIs. The aim is to enhance existing ad-hoc analyses found in pdf-reports published by the European Commision by connecting to new data sources, including:</p>
 <ul>
-<li>material criticality (from the EU Commissions pdf reports),</li>
-<li>market development (from the Eurostat API),</li>
-<li>price development (from Trading Economics API), and</li>
-<li>environmental impact (from the Yale Environmental Performance Index, EPI).</li>
+<li>various material, country, and region-level data (from the EU Commissions pdf reports),</li>
+<li>market-sector-level historical and updated EU production indicator in Euro (from the Eurostat API),</li>
+<li>live exchange rate data (from fixer.io API), and</li>
+<li>country-level environmental impact indicators (from the Yale Environmental Performance Index, EPI).</li>
 </ul>
+<p><strong>Business Question:</strong> How can a European business use the EU list of Critical Raw Materials (EU CRM) with additional metrics to mitigate supply chain risks?</p>
+<!--
+The analyses aim to provide insights into risk of being dependent on and sourcing raw materials from a selection of different indicator categories, including 
+
+- How might real-time metrics inform investment or procurement decisions?
+
+- Linking your analytics to tangible business impact (cost savings, supply reliability, compliance) makes it more compelling.
+-->
 </section>
 <section id="project-walkthrough" class="level2">
 <h2 class="anchored" data-anchor-id="project-walkthrough">Project Walkthrough</h2>
@@ -187,11 +194,11 @@ Note
 <li>Economic Importance</li>
 <li>Supply Risk</li>
 </ol>
-<p>Classical risk theory is used to calculate the overall risk for each material, based on the main categories which are, in turn, calculated using combinations of various indicators. See the EU CRM methdology document for how the indicators form the main categories <a href="https://op.europa.eu/en/publication-detail/-/publication/2d43b7e2-66ac-11e7-b2f2-01aa75ed71a1/language-en">Link</a>.</p>
+<p>Classical risk theory is used to calculate the overall risk for each material, based on the main categories which are, in turn, calculated using combinations of various indicators. See the <a href="https://op.europa.eu/en/publication-detail/-/publication/2d43b7e2-66ac-11e7-b2f2-01aa75ed71a1/language-en">EU CRM methodology</a> document for how the indicators form the main categories.</p>
 </div>
 </div>
-<section id="importing-to-data-factory" class="level3">
-<h3 class="anchored" data-anchor-id="importing-to-data-factory">Importing to Data Factory</h3>
+<section id="ingesting-data-with-dataflows-in-data-factory" class="level3">
+<h3 class="anchored" data-anchor-id="ingesting-data-with-dataflows-in-data-factory">Ingesting data with dataflows in Data Factory</h3>
 <p>To start I open up a template for ‘Basic data analytics’ in Data Factory and name the workspace ‘CRM Learning Project’, which gives me just the necessary workloads I need for my analysis, namely:</p>
 <ul>
 <li>Data Factory for orchestrating</li>
@@ -207,13 +214,12 @@ Note
 </div>
 <section id="importing-eu-critical-raw-materials-data" class="level4">
 <h4 class="anchored" data-anchor-id="importing-eu-critical-raw-materials-data">Importing EU Critical Raw Materials Data</h4>
-<p>The data is currently published in pdfs on the <a href="https://single-market-economy.ec.europa.eu/sectors/raw-materials/areas-specific-interest/critical-raw-materials_en">EU Commission’s site for CRM</a>. Using Excel’s Power Query or Fabric’s Data Factory to extract the data from the pdf’s yields data with critical errors in the dataframe structures, e.g.&nbsp;mismatching columns and cell values. Additionally, the data is spread over several years and is not standardized, making future updates difficult to automate.</p>
-<p>I explored the datasets while considering ways to effectively manage the data cleaning. The size of the datasets are relatively small and manageable, so I opted to get better control of the source data by combining Power Query with manual cleaning in Excel, and publishing to a <a href="https://github.com/erikemilsson/EU-Critical-Raw-Materials-CRM-Reports-Datasets">public github repository</a> (while of course following the EU Commission’s licensing requirements). This:</p>
+<p>I imported the main data from pdfs on the <a href="https://single-market-economy.ec.europa.eu/sectors/raw-materials/areas-specific-interest/critical-raw-materials_en">EU Commission’s site for CRM</a>. I initially found the data to be almost impossible to clean using the Dataflow Gen2 connectors. There were many mismatched columns and cell values or critical errors in the datafram structures. I chose to publish my own cleaned datasets (using Power Query and manual cleaning) in a <a href="https://github.com/erikemilsson/EU-Critical-Raw-Materials-CRM-Reports-Datasets">public github repository</a>. This had several positives, including:</p>
 <ul>
-<li>simplifies the data ingestion stage considerably,</li>
-<li>enables other analysts and developers to use the datasets and collaborate,</li>
-<li>creates transparency in data cleaning, and</li>
-<li>tracks updates for future updates of the list through version control.</li>
+<li>the simplification of data ingestion to Data Factory,</li>
+<li>enabling other analysts and developers to use the datasets and collaborate,</li>
+<li>enabling transparency into the data cleaning steps,</li>
+<li>scalability and tracking of future updates.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -241,7 +247,7 @@ Note
 <li>In the ‘Share’-column I
 <ul>
 <li>removed the percent signs with the ‘Replace values’ function,</li>
-<li>divided the values by 100 using the</li>
+<li>divided the values by 100,</li>
 <li>changed the datatype to ‘Whole Number’ temporarily so i can perform standard mathematical operations with the function under the ‘Transform’ tab, and</li>
 <li>changed the datatype to percent.</li>
 </ul></li>
@@ -259,7 +265,7 @@ Note
 <section id="importing-eurostat-data" class="level4">
 <h4 class="anchored" data-anchor-id="importing-eurostat-data">Importing Eurostat Data</h4>
 <p>Eurostat contains a wealth of information for the EU on the country-level, but for this analysis I used it to connect to a specific respective dataset in the static EU CRM report for comparison. The <a href="https://op.europa.eu/en/publication-detail/-/publication/2d43b7e2-66ac-11e7-b2f2-01aa75ed71a1">methdology report</a> states that ‘NACE v2’ categories indicating ‘production in industry’ to describe each country’s demands.</p>
-<p>Import by going to the <a href="https://ec.europa.eu/eurostat/databrowser/explore/all/all_themes?lang=en&amp;display=list&amp;sort=category">Eurostat database</a>, select ‘Industry, trade and services’, and ‘Short-term business statistics’, and ‘Industry’, and ‘Production in Industry’. Then click on the ‘Production in industry - annual data’ dataset</p>
+<p>Import by going to the <a href="https://ec.europa.eu/eurostat/databrowser/explore/all/all_themes?lang=en&amp;display=list&amp;sort=category">Eurostat database</a>, select ‘Industry, trade and services’, and ‘Short-term business statistics’, and ‘Industry’, and ‘Production in Industry’. Then click on the ‘Production in industry - annual data’ dataset.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="./images/Eurostat_prod_db.png" class="img-fluid figure-img"></p>
@@ -267,22 +273,47 @@ Note
 </figure>
 </div>
 <p>In the next page, set the filters to only include the NACE rev. 2 activities C19-C31 based on the existing activities in the static EU Critical Raw Materials Data which I will later connect to in the data model. After the filtering, clicking ‘download’ will open up options. Clicking ‘Advanced settings’ opens up additional options from which choosing the ‘SDMX-ML Genergic Data (2.1)’ will give a link to which the Dataflow Gen2 connector can use the ‘SIS-CC SDMX’ API connector with. Finally, selecting only the relevant rows and setting the datatypes will yield the desired table for publishing in Data Factory.</p>
+<p>In addition to changing data types, I added a custom column and used the code below to cut out the first three letters/numbers from the NACE column to ensure accurate connections to the model in Power BI later on.</p>
+<pre class="{m-language}"><code>Text.Start([NACE sector], 3)</code></pre>
 </section>
-<section id="importing-tbc" class="level4">
-<h4 class="anchored" data-anchor-id="importing-tbc">Importing (tbc)</h4>
-<p>Import price data &amp; market trends from e.g.&nbsp;Trading Economics API, World Bank Commodity Markets or IMF Primary Commodity Prices.</p>
+<section id="importing-live-feed-of-exchange-rates" class="level4">
+<h4 class="anchored" data-anchor-id="importing-live-feed-of-exchange-rates">Importing live feed of exchange rates</h4>
+<p>I wanted a use-case for Microsoft’s Real-Time Intelligence, so I found <a href="www.fixer.io">fixer.io</a> which provides a free-tier api of hourly-updated exchange rates. From its API, I import streaming data to connect to Power BI’s data model later. The data I import is the exchange from Euros to Swedish Krona (SEK), to be used to translate the costs for Swedish businesses. <!--
+I began by creating a data pipeline to run every hour and store in a Lakehouse table to keep the historical development of events. The 
+
+I started by creating an Eventstream
+
+Microsoft's Real-Time Intelligence can provide streaming data in the form of an exchange table from Euros to Swedish Krona (SEK) to  be imported to the data warehouse. 
+--></p>
 </section>
 <section id="importing-yale-environmental-performance-indicator-epi-data" class="level4">
 <h4 class="anchored" data-anchor-id="importing-yale-environmental-performance-indicator-epi-data">Importing Yale Environmental Performance Indicator (EPI) Data</h4>
-<p>Yale EPI data is published annually in csv files and can be found <a href="https://epi.yale.edu/downloads">here</a>. I uploaded the files to my github portfolio repository because they couldn’t be uploaded directly to Fabric as it wasn’t tied to a OneDrive for Business account.</p>
+<p><a href="https://epi.yale.edu/downloads">Yale EPI data</a> is published annually in csv files. I uploaded the files to my github portfolio repository because they couldn’t be uploaded directly to Fabric as it wasn’t tied to a OneDrive for Business account. A simple Dataflow Gen2 connector using Web API was enough to ingest the data to the Data Factory.</p>
 </section>
 </section>
-<section id="create-a-data-warehouse" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-data-warehouse">Create a data warehouse</h3>
-<p>After collecting the data I create a data warehouse for my structured data and name it ‘CRM_Data_Warehouse’. From the data warehouse i create a pipeline</p>
-<p>From here I can start creating schemas and store the data used for analytics in Power BI.</p>
+<section id="creating-a-data-warehouse-and-datalake-to-house-data-in-parquet-format-tbc" class="level3">
+<h3 class="anchored" data-anchor-id="creating-a-data-warehouse-and-datalake-to-house-data-in-parquet-format-tbc">Creating a data warehouse and datalake to house data in Parquet format (tbc)</h3>
+<section id="saving-to-data-warehouse-tbc" class="level4">
+<h4 class="anchored" data-anchor-id="saving-to-data-warehouse-tbc">Saving to data warehouse (tbc)</h4>
+<p>All my tables except for the exchange rates are fed into the data warehouse I create in Data Factory.</p>
+<p>I use a Dataflow gen2 connector for the import step, and see an issue that several different country codes are being used for tables coming from different sources. To manage these discrepancies, I decide to translate each table’s countries to the ISO 3-letter standard. To do this I:</p>
+<ol type="1">
+<li>Importing another table with ISO country codes</li>
+<li>that I use to translate existing tables’ countries with.</li>
+</ol>
+<p>Here I also notice some characters that are not allowed, such as ‘ü’ in Türkye, which I fix in the original Dataflow gen2 connector. <!--
+```ruuocqnzwdnz
+= Table.TransformColumns(
+    PreviousStep,
+   1 {{"TextColumn", each Text.Replace(_, "ü", "u"), type text}}
+)
+```
+--> #### Saving to historical exchange rate to datalake (tbc) <!--
+I create a datalake to which I import the 
+--></p>
 
 
+</section>
 </section>
 </section>
 </section>
