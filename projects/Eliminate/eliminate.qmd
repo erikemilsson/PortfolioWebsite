@@ -56,7 +56,7 @@ The Power BI dashboard gives users the an additional perspective to the best loc
 
 ::: {style="text-align: center;"}
 
-![](./eliminate_pbi.png)
+![](./ELiMINATE_dashboard_GIF.gif)
 
 **Figure 3:** Competitor dashboard to complement optimization results.
 
