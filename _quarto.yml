@@ -5,8 +5,7 @@ project:
     - projects/Eliminate/Supply_and_Demand_Year_2030.html 
 
 theme:
-  light: united
-  dark: darkly
+  light: superhero
 fontsize: 1.1em
 
 website:
