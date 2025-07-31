@@ -42,6 +42,9 @@ I'm currently living in Gothenburg Sweden and I've previously lived in
 
 ## Pictures
 
+
+::: {layout-nrow=2}
+
 ![Tjörn, Sweden](./images/Erik_1_Tjörn.jpeg)
 
 ![Eating churros and hot chocolate in Barcelona, Spain](./images/Erik_5_Barcelona.jpeg)
@@ -51,3 +54,7 @@ I'm currently living in Gothenburg Sweden and I've previously lived in
 ![Visiting Northvolt on a rainy day in Skellefteå, Sweden](./images/Erik_8_Northvolt.jpg)
 
 ![Visiting Tabletop Mountain in Cape Town, South Africa](./images/Erik_11_CapeTown.jpg)
+
+![On the Tjörn island](./images/Erik_9_Tjörn.jpg)
+
+:::

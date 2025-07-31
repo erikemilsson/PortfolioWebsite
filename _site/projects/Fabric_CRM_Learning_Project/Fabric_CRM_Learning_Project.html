@@ -139,9 +139,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#project-walkthrough" id="toc-project-walkthrough" class="nav-link" data-scroll-target="#project-walkthrough">Project Walkthrough</a>
   <ul class="collapse">
   <li><a href="#ingesting-data-with-dataflows-in-data-factory" id="toc-ingesting-data-with-dataflows-in-data-factory" class="nav-link" data-scroll-target="#ingesting-data-with-dataflows-in-data-factory">Ingesting data with dataflows in Data Factory</a></li>
-  <li><a href="#creating-a-data-warehouse-and-datalake-to-house-data-in-parquet-format" id="toc-creating-a-data-warehouse-and-datalake-to-house-data-in-parquet-format" class="nav-link" data-scroll-target="#creating-a-data-warehouse-and-datalake-to-house-data-in-parquet-format">Creating a data warehouse and datalake to house data in Parquet format</a></li>
+  <li><a href="#creating-a-data-warehouse-and-datalake-to-house-data-in-parquet-format-tbc" id="toc-creating-a-data-warehouse-and-datalake-to-house-data-in-parquet-format-tbc" class="nav-link" data-scroll-target="#creating-a-data-warehouse-and-datalake-to-house-data-in-parquet-format-tbc">Creating a data warehouse and datalake to house data in Parquet format (tbc)</a></li>
   </ul></li>
-  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -165,7 +164,13 @@ ul.task-list li input[type="checkbox"] {
 <li>country-level environmental impact indicators (from the Yale Environmental Performance Index, EPI).</li>
 </ul>
 <p><strong>Business Question:</strong> How can a European business use the EU list of Critical Raw Materials (EU CRM) with additional metrics to mitigate supply chain risks?</p>
-<p><strong>Solution:</strong> By integrating diverse datasets within Microsoft Fabric, I created a dynamic Power BI dashboard that offers a comprehensive view of the EU’s critical raw materials. This dashboard allows businesses to assess supply chain risks by not only considering economic importance and supply risk but also incorporating real-time market data and environmental performance indicators. This enables more informed, proactive decision-making to ensure supply chain resilience.</p>
+<!--
+The analyses aim to provide insights into risk of being dependent on and sourcing raw materials from a selection of different indicator categories, including 
+
+- How might real-time metrics inform investment or procurement decisions?
+
+- Linking your analytics to tangible business impact (cost savings, supply reliability, compliance) makes it more compelling.
+-->
 </section>
 <section id="project-walkthrough" class="level2">
 <h2 class="anchored" data-anchor-id="project-walkthrough">Project Walkthrough</h2>
@@ -270,44 +275,43 @@ Note
 </section>
 <section id="importing-live-feed-of-exchange-rates" class="level4">
 <h4 class="anchored" data-anchor-id="importing-live-feed-of-exchange-rates">Importing live feed of exchange rates</h4>
-<p>I wanted a use-case for Microsoft’s Real-Time Intelligence, so I found <a href="http://www.fixer.io">fixer.io</a> which provides a free-tier api of hourly-updated exchange rates. From its API, I import streaming data to connect to Power BI’s data model later. The data I import is the exchange from Euros to Swedish Krona (SEK), to be used to translate the costs for Swedish businesses.</p>
+<p>I wanted a use-case for Microsoft’s Real-Time Intelligence, so I found <a href="www.fixer.io">fixer.io</a> which provides a free-tier api of hourly-updated exchange rates. From its API, I import streaming data to connect to Power BI’s data model later. The data I import is the exchange from Euros to Swedish Krona (SEK), to be used to translate the costs for Swedish businesses. <!--
+I began by creating a data pipeline to run every hour and store in a Lakehouse table to keep the historical development of events. The 
+
+I started by creating an Eventstream
+
+Microsoft's Real-Time Intelligence can provide streaming data in the form of an exchange table from Euros to Swedish Krona (SEK) to  be imported to the data warehouse. 
+--></p>
 </section>
 <section id="importing-yale-environmental-performance-indicator-epi-data" class="level4">
 <h4 class="anchored" data-anchor-id="importing-yale-environmental-performance-indicator-epi-data">Importing Yale Environmental Performance Indicator (EPI) Data</h4>
 <p><a href="https://epi.yale.edu/downloads">Yale EPI data</a> is published annually in csv files. I uploaded the files to my github portfolio repository because they couldn’t be uploaded directly to Fabric as it wasn’t tied to a OneDrive for Business account. A simple Dataflow Gen2 connector using Web API was enough to ingest the data to the Data Factory.</p>
 </section>
 </section>
-<section id="creating-a-data-warehouse-and-datalake-to-house-data-in-parquet-format" class="level3">
-<h3 class="anchored" data-anchor-id="creating-a-data-warehouse-and-datalake-to-house-data-in-parquet-format">Creating a data warehouse and datalake to house data in Parquet format</h3>
-<section id="saving-to-data-warehouse" class="level4">
-<h4 class="anchored" data-anchor-id="saving-to-data-warehouse">Saving to data warehouse</h4>
+<section id="creating-a-data-warehouse-and-datalake-to-house-data-in-parquet-format-tbc" class="level3">
+<h3 class="anchored" data-anchor-id="creating-a-data-warehouse-and-datalake-to-house-data-in-parquet-format-tbc">Creating a data warehouse and datalake to house data in Parquet format (tbc)</h3>
+<section id="saving-to-data-warehouse-tbc" class="level4">
+<h4 class="anchored" data-anchor-id="saving-to-data-warehouse-tbc">Saving to data warehouse (tbc)</h4>
 <p>All my tables except for the exchange rates are fed into the data warehouse I create in Data Factory.</p>
 <p>I use a Dataflow gen2 connector for the import step, and see an issue that several different country codes are being used for tables coming from different sources. To manage these discrepancies, I decide to translate each table’s countries to the ISO 3-letter standard. To do this I:</p>
 <ol type="1">
 <li>Importing another table with ISO country codes</li>
 <li>that I use to translate existing tables’ countries with.</li>
 </ol>
-<p>Here I also notice some characters that are not allowed, such as ‘ü’ in Türkye, which I fix in the original Dataflow gen2 connector.</p>
-</section>
-<section id="saving-to-historical-exchange-rate-to-datalake" class="level4">
-<h4 class="anchored" data-anchor-id="saving-to-historical-exchange-rate-to-datalake">Saving to historical exchange rate to datalake</h4>
-<p>I created a datalake to which I import the streaming exchange rate data. This allows for historical analysis of exchange rate fluctuations and their impact on material costs.</p>
-</section>
-</section>
-</section>
-<section id="results" class="level2">
-<h2 class="anchored" data-anchor-id="results">Results</h2>
-<p>The final result is a Power BI dashboard that provides a comprehensive and interactive view of the EU’s critical raw materials. The dashboard allows users to:</p>
-<ul>
-<li><strong>Explore Critical Materials:</strong> Interactively filter and view data for each critical raw material, including its economic importance, supply risk, and major suppliers.</li>
-<li><strong>Analyze Supply Chain Risks:</strong> Assess the risk associated with each material by drilling down into the various indicators that contribute to the overall risk score.</li>
-<li><strong>Monitor Market Trends:</strong> Track the production of key industries in the EU and analyze how it relates to the demand for critical raw materials.</li>
-<li><strong>Evaluate Environmental Impact:</strong> Compare the environmental performance of different supplier countries, providing a more holistic view of supply chain sustainability.</li>
-<li><strong>Get Real-Time Exchange Rates:</strong> For businesses operating in different currencies, the dashboard provides real-time exchange rates to accurately assess costs.</li>
-</ul>
-<p>By combining these different data sources into a single, easy-to-use dashboard, this project provides a powerful tool for European businesses to navigate the complexities of the global raw materials market and build more resilient and sustainable supply chains.</p>
+<p>Here I also notice some characters that are not allowed, such as ‘ü’ in Türkye, which I fix in the original Dataflow gen2 connector. <!--
+```ocrdgcbrcyfs
+= Table.TransformColumns(
+    PreviousStep,
+   1 {{"TextColumn", each Text.Replace(_, "ü", "u"), type text}}
+)
+```
+--> #### Saving to historical exchange rate to datalake (tbc) <!--
+I create a datalake to which I import the 
+--></p>
 
 
+</section>
+</section>
 </section>
 </section>
 
